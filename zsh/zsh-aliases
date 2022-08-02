@@ -4,6 +4,7 @@ alias f='zi'
 alias g='lazygit'                                                                                                                                                                            
 alias vim='nvim'                                                                                                                                                                             
 alias vi='nvim'                                                                                                                                                                              
+alias tm='tmux attach'                                                                                                                                                                              
 alias dnf='sudo dnf'                                                                                                                                                                         
 alias apt='sudo dnf'                                                                                                                                                                         
 # alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"                                                          
