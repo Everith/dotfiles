@@ -1,3 +1,3 @@
-zsh/plugins/
-zsh/.zcompdump
-zsh/history
+zsh/.config/zsh/plugins/
+zsh/.config/zsh/.zcompdump
+zsh/.config/zsh/history
