@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 echo "Redirecting Cockpit admin page"
 iptables -A PREROUTING -t nat -i enp4s0 -p tcp --dport 9090 -j DNAT --to-destination 192.168.33.2:9090
 iptables -A FORWARD -p tcp -d 192.168.33.2 --dport 9090 -j ACCEPT

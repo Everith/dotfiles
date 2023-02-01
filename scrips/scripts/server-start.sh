@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 echo "Starting port forwarding to server"
 /home/erik/scripts/firewall-deb.sh
