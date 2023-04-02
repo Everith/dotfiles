@@ -20,6 +20,10 @@ echo "Redirecting Torrent"
 iptables -A PREROUTING -t nat -i enp4s0 -p tcp --dport 9091 -j DNAT --to-destination 192.168.33.2:9091
 iptables -A FORWARD -p tcp -d 192.168.33.2 --dport 9091 -j ACCEPT
 
+echo "Redirecting Stable Defusion WEBUI"
+iptables -A PREROUTING -t nat -i enp4s0 -p tcp --dport 7860 -j DNAT --to-destination 192.168.33.2:7860
+iptables -A FORWARD -p tcp -d 192.168.33.2 --dport 7860 -j ACCEPT
+
 # samba
 echo "Redirecting Samba shares"
 iptables -A PREROUTING -t nat -i enp4s0 -p tcp --dport 445 -j DNAT --to-destination 192.168.33.2:445
@@ -32,4 +36,4 @@ iptables -A PREROUTING -t nat -i enp4s0 -p udp --dport 137 -j DNAT --to-destinat
 iptables -A FORWARD -p udp -d 192.168.33.2 --dport 137 -j ACCEPT
 
 echo "Enabel forwarding"
-iptables -A POSTROUTING -t nat -s 192.168.33.2 -o wg0 -j MASQUERADE
+iptables -A POSTROUTING -t nat -s 192.168.33.0 -o wg0 -j MASQUERADE
