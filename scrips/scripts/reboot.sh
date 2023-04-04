@@ -1,4 +1,5 @@
 #!/bin/env bash
 
-# fedota disable SELinux
-sudo setenforce 0
+
+sudo bash /home/erik/scripts/server-stop.sh
+sudo reboot

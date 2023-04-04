@@ -4,18 +4,18 @@
 #/home/erik/scripts/firewall-deb.sh
 
 echo "Stopping media server"
-cd /docker-home/compose/media-server/
+cd /srv/docker/compose/media-server/
 docker-compose down
 echo "Stoppong home assistant server"
-cd /docker-home/compose/home-server/
+cd /srv/docker/compose/home-server/
 docker-compose down
 cd
 
 echo "UnMounting samba shares"
 echo "CCTV"
-umount /srv/data/cctv
+sudo umount /srv/data/cctv
 echo "MEDIA"
-umount /srv/data/media/media
+sudo umount /srv/data/media
 echo "SERVER"
-umount /srv/data/csalad
+sudo umount /srv/data/server
 
