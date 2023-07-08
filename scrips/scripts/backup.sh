@@ -39,9 +39,6 @@ cp -r /$docker_home/bazarr $backup_temp/$docker_home
 cp -r /$docker_home/lidarr $backup_temp/$docker_home
 cp -r /$docker_home/readarr $backup_temp/$docker_home
 
-
-
-
 # System config files
 mkdir -p $backup_temp/etc/nginx/sites-enabled
 cp -r /etc/nginx/sites-available $backup_temp/etc/nginx
@@ -63,6 +60,11 @@ mkdir -p $backup_temp/etc/systemd/system
 cp /etc/systemd/system/* $backup_temp/etc/systemd/system
 
 cp /etc/motd $backup_temp/etc
+cp -r /var/spool/cron/crontabs/* $backup_temp/var/spool/cron/crontabs
+
+
+#DUCKDNS
+cp -r /home/erik/duckdns/* $backup_temp/home/erik/duckdns
 
 # notes
 cp -r /etc/fstab $backup_temp/etc
