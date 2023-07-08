@@ -67,7 +67,7 @@ cp -r /var/spool/cron/crontabs/* $backup_temp/var/spool/cron/crontabs
 cp -r /home/erik/duckdns/* $backup_temp/home/erik/duckdns
 
 # notes
-cp -r /etc/fstab $backup_temp/etc
+cp -r /etc/fstab $backup_temp/
 sudo apt list | awk -F'/' '{ printf "%-30s %s\n", $1, $2 }' > $backup_temp/installed_application.txt
 
 
