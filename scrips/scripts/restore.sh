@@ -5,10 +5,9 @@ restore_root="/srv/backup/temp/srv/backup/temp"
 mkdir -p /srv/backup/temp
 tar zxf /srv/backup/latest.tar.gz -C /srv/backup/temp
 
-
 # Install applications: 
 sudo apt update && apt upgrade -y
-sudo apt install nginx samba git docker docker-compose wireguard tmux transmission-daemon curl wget exa btop zsh -y
+sudo apt install nginx samba git docker docker-compose wireguard tmux transmission-daemon curl wget exa btop zsh syncthing -y
 
 # Cockpit install 
 sudo apt install cockpit cockpit-storaged cockpit-networkmanager 
@@ -27,5 +26,22 @@ sudo chown -R erik:erik /srv
 sudo cp -r $restore_root/etc/* /etc/
 sudo cp -r $restore_root/srv/* /srv/
 sudo cp -r $restore_root/var/* /var/
+sudo cp -r $restore_root/home/erik/* /home/erik/
 
 sudo rm -r /srv/backup/temp
+
+mkdir /srv/cctv
+mkdir /srv/syncthing
+sudo addgroup media
+sudo addgroup csalad
+sudo addgroup docker
+
+sudo useradd --user-group --create-home --groups csalad karcsi
+sudo usermod -aG media,docker,csalad erik
+
+#Fixing permissions:
+# sudo chown -R erik:media /srv/data
+sudo chown -R erik:docker /srv/docker
+sudo chown -R erik:media /srv/cctv
+sudo chown -R erik:media /srv/syncthing
+sudo chown erik:crontab /var/spool/cron/crontabs/erik

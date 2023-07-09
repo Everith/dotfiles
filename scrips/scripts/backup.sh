@@ -21,7 +21,6 @@ cp -r /$docker_home/pihole $backup_temp/$docker_home
 cp -r /$docker_home/mosquitto-data $backup_temp/$docker_home
 cp -r /$docker_home/zigbee2mqtt-data $backup_temp/$docker_home
 
-
 mkdir -p $backup_temp/$docker_home/jellyfin/config
 cp -r /$docker_home/jellyfin/config/config $backup_temp/$docker_home/jellyfin/config
 cp -r /$docker_home/jellyfin/config/log $backup_temp/$docker_home/jellyfin/config
@@ -60,15 +59,17 @@ mkdir -p $backup_temp/etc/systemd/system
 cp /etc/systemd/system/* $backup_temp/etc/systemd/system
 
 cp /etc/motd $backup_temp/etc
+mkdir -p $backup_temp/var/spool/cron/crontabs/
 cp -r /var/spool/cron/crontabs/* $backup_temp/var/spool/cron/crontabs
 
 
 #DUCKDNS
+mkdir -p $backup_temp/home/erik/duckdns
 cp -r /home/erik/duckdns/* $backup_temp/home/erik/duckdns
 
 # notes
 cp -r /etc/fstab $backup_temp/
-sudo apt list | awk -F'/' '{ printf "%-30s %s\n", $1, $2 }' > $backup_temp/installed_application.txt
+apt list | awk -F'/' '{ printf "%-30s %s\n", $1, $2 }' > $backup_temp/installed_application.txt
 
 
 mv $backup/latest.tar.gz $backup/$date.tar
