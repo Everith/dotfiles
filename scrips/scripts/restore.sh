@@ -23,12 +23,27 @@ sudo chmod a+rx /usr/local/bin/yt-dlp  # Make executable
 
 sudo chown -R erik:erik /srv
 
+sudo systemctl stop nginx
+sudo systemctl stop transmission-daemon
+sudo systemctl stop smb
+
 sudo cp -r $restore_root/etc/* /etc/
 sudo cp -r $restore_root/srv/* /srv/
 sudo cp -r $restore_root/var/* /var/
 sudo cp -r $restore_root/home/erik/* /home/erik/
 
+sudo systemctl start nginx
+sudo systemctl start transmission-daemon
+sudo systemctl start smb
+
 sudo rm -r /srv/backup/temp
+
+cd /var/lib/transmission-daemon/
+curl -OL https://github.com/johman10/flood-for-transmission/releases/download/latest/flood-for-transmission.zip
+unzip flood-for-transmission.zip
+rm flood-for-transmission.zip
+sudo chown -R erik:debian-transmission /var/lib/transmission-daemon/flood-for-transmission
+cd
 
 mkdir /srv/cctv
 mkdir /srv/syncthing
@@ -36,8 +51,9 @@ sudo addgroup media
 sudo addgroup csalad
 sudo addgroup docker
 
-sudo useradd --user-group --create-home --groups csalad karcsi
+# sudo useradd --user-group --create-home --groups csalad 
 sudo usermod -aG media,docker,csalad erik
+sudo usermod -aG media debian-transmission
 
 #Fixing permissions:
 # sudo chown -R erik:media /srv/data
