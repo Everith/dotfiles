@@ -52,6 +52,7 @@ sudo addgroup csalad
 sudo addgroup docker
 
 # sudo useradd --user-group --create-home --groups csalad 
+sudo useradd --user-group --system --no-create-home --groups csalad nginx
 sudo usermod -aG media,docker,csalad erik
 sudo usermod -aG media debian-transmission
 
