@@ -39,9 +39,9 @@ sudo systemctl start smb
 sudo rm -r /srv/backup/temp
 
 cd /var/lib/transmission-daemon/
-curl -OL https://github.com/johman10/flood-for-transmission/releases/download/latest/flood-for-transmission.zip
-unzip flood-for-transmission.zip
-rm flood-for-transmission.zip
+sudo curl -OL https://github.com/johman10/flood-for-transmission/releases/download/latest/flood-for-transmission.zip
+sudo unzip flood-for-transmission.zip
+sudo rm flood-for-transmission.zip
 sudo chown -R erik:debian-transmission /var/lib/transmission-daemon/flood-for-transmission
 cd
 

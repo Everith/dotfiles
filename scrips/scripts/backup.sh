@@ -43,7 +43,7 @@ mkdir -p $backup_temp/etc/nginx/sites-enabled
 cp -r /etc/nginx/sites-available $backup_temp/etc/nginx
 cp /etc/nginx/nginx.conf $backup_temp/etc/nginx
 mkdir -p $backup_temp/var/www
-cp -r /srv/www/* $backup_temp/var/www
+cp -r /srv/www/* $backup_temp/srv/www
 
 mkdir -p $backup_temp/etc/samba
 cp -r /etc/samba/smb.conf $backup_temp/etc/samba
