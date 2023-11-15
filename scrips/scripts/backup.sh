@@ -55,8 +55,8 @@ mkdir -p $backup_temp/etc/transmission-daemon
 cp -r /etc/transmission-daemon/* $backup_temp/etc/transmission-daemon
 cp -r /var/lib/transmission-daemon/* $backup_temp/etc/transmission-daemon
 
-mkdir -p $backup_temp/etc/systemd/system
-cp /etc/systemd/system/* $backup_temp/etc/systemd/system
+mkdir -p $backup_temp/etc/systemd
+cp /etc/systemd/* $backup_temp/etc/systemd
 
 cp /etc/motd $backup_temp/etc
 mkdir -p $backup_temp/var/spool/cron/crontabs/
