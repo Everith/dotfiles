@@ -21,7 +21,7 @@ sudo cd
 sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
 sudo chmod a+rx /usr/local/bin/yt-dlp  # Make executable
 
-sudo chown -R erik:erik /srv
+# sudo chown -R erik:erik /srv
 
 sudo systemctl stop nginx
 sudo systemctl stop transmission-daemon
@@ -49,7 +49,6 @@ mkdir /srv/cctv
 mkdir /srv/syncthing
 sudo addgroup media
 sudo addgroup csalad
-sudo addgroup docker
 
 # sudo useradd --user-group --create-home --groups csalad 
 sudo useradd --user-group --system --no-create-home --groups csalad nginx
