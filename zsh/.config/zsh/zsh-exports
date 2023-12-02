@@ -8,8 +8,8 @@ setopt append_history
 setopt extended_history
 setopt inc_append_history
 
-export VISUAL="/usr/bin/nvim"
-export EDITOR="/usr/bin/nvim"
+export VISUAL="/bin/nvim"
+export EDITOR="/bin/nvim"
 
 export PATH="$HOME/.local/bin":$PATH
 export PATH=$HOME/.local/share/go/bin:$PATH
