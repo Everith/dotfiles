@@ -3,10 +3,10 @@
 # Automatically remove a torrent and delete its data after a specified period of
 # time (in seconds).
 
-TARGET="/srv/data/media/torrent"
+TARGET="/srv/data/media/torrentautomatic"
 USER=erik
 PASS=erik
-BIN="/usr/bin/transmission-remote 192.168.0.5:9092"
+BIN="/usr/bin/transmission-remote"
 
 # The default is 10 days (in seconds).
 CUTOFF=`expr 86400 \* 20`
@@ -20,13 +20,13 @@ OLDIFS=$IFS
 IFS="
 "
 
-for ENTRY in `$BIN -n $USER:$PASS -l | grep 100%.*Done.*Finished`; do
+for ENTRY in `$BIN 192.168.0.5:9092 -n $USER:$PASS -l | grep 100%.*Done.*Finished`; do
 
     # Pull the ID out of the listing.
     ID=`echo $ENTRY | sed "s/^ *//g" | sed "s/ *100%.*//g"`
 
     # Determine the name of the downloaded file/folder.
-    NAME=`$BIN -n $USER:$PASS -t $ID -f | head -1 |\
+    NAME=`$BIN 192.168.0.5:9092 -n $USER:$PASS -t $ID -f | head -1 |\
          sed "s/ ([0-9]\+ files)://g"`
 
     # If it's a folder, find the last modified file and its modification time.
@@ -51,7 +51,7 @@ for ENTRY in `$BIN -n $USER:$PASS -l | grep 100%.*Done.*Finished`; do
     if [ $DIFF -gt $CUTOFF ]; then
         date
         echo "Removing $NAME with ID:$ID"
-        $BIN -n $USER:$PASS -t $ID --remove-and-delete
+        $BIN 192.168.0.5:9092 -n $USER:$PASS -t $ID --remove-and-delete
     fi
 
 done
