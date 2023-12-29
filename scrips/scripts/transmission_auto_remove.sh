@@ -3,10 +3,10 @@
 # Automatically remove a torrent and delete its data after a specified period of
 # time (in seconds).
 
-TARGET=This is where you put your completed torrents.
+TARGET="/srv/data/media/torrent"
 USER=erik
 PASS=erik
-BIN="/usr/bin/transmission-remote"
+BIN="/usr/bin/transmission-remote 192.168.0.5:9092"
 
 # The default is 10 days (in seconds).
 CUTOFF=`expr 86400 \* 20`
