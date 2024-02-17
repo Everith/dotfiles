@@ -1,11 +1,7 @@
 #!/bin/env bash
 
-echo "Linking .config files ..."
-ln -sr ../nvim ~/.config/
-ln -sr ../zsh ~/.config/
-ln -sr ../gti ~/.config/
-ln -sr ../scrips ~/.config/
-echo "Linking .config DONE "
+sudo pacman -Suy -y
+sudo pacman -S bluez bluez-utils
 
 echo "Creating .zshenv file ..."
 touch ~/.zshenv

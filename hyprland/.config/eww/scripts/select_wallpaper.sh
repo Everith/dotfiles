@@ -1,6 +1,6 @@
 #!/bin/bash
 
-file=$(zenity --file-selection --filename $HOME/.wallpaper/)
+file=$(zenity --file-selection --filename $HOME/Pictures/)
 
 if [[ $file == "" ]]; then
     exit 0
