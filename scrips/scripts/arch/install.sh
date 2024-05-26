@@ -64,7 +64,6 @@ passwd erik
 # Enable necessary services (e.g., NetworkManager)
 systemctl enable NetworkManager
 
-sudo modprobe cifs
 
 # Exit chroot
 exit
