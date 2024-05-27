@@ -1,5 +1,6 @@
 #! /bin/bash
 
+hostname=evdev
 ############################################################################################################
 ############################   LANGUAGE AND LOCAL  #########################################################
 ############################################################################################################
@@ -18,7 +19,7 @@ echo "FONT=Hack NF" >> /etc/vconsole.conf
 ############################################################################################################
 ####################################   NETWORK   ###########################################################
 ############################################################################################################
-source ${HOME}/dotfiles/arch/user.conf
+
 echo "127.0.0.1       localhost" >> /etc/hosts
 echo "::1             localhost" >> /etc/hosts
 echo "127.0.1.1       $hostname.localdomain $hostname" >> /etc/hosts
@@ -73,15 +74,7 @@ PKGS=(
 'pavucontrol'
 'wireplumber'
 'pamixer'
-''
-''
-''
-''
-''
-''
-''
-
-
+'limine'
 ###########################
 ####   Applications   #####
 ###########################
@@ -154,64 +147,7 @@ PKGS=(
 'thunar-volman'
 'cdrtools'
 'cdrdao'
-''
-''
-''
-''
-''
-''
-''
-''
-''
-''
-''
-''
-''
-''
-''
-''
-''
-''
-''
-
-###########################
-###   Display manager   ###
-###########################
-# 'lightdm'
-# 'lightdm-gtk-greeter'
-# 'lightdm-gtk-greeter-settings'
-# 'sddm'  #plasma login manager or something need to enable sddm.service
-# 'ly-git' #aur DM comandline minimal 
-
-########################### wayland
-#######   sway   ########## dont support nvidia drivers only opensource drivers
-###########################
-# 'sway'                                               # Tiling Wayland compositor and replacement for the i3 window manager
-# 'swaybg'                                             # Wallpaper tool for Wayland compositors
-# 'swayidle'                                           # Idle management daemon for Wayland
-# 'swaylock'                                           # Screen locker for Wayland
-# 'waybar'                                             # Highly customizable Wayland bar for Sway and Wlroots based compositors
-
-########################## xorg
-######   i3-gaps   #######
-##########################
-# 'i3-gaps'
-# 'i3lock'
-# 'i3status'
-# 'rofi'
-# 'dmenu'
-
-########################### xorg and wayland
-#####   kde-plasma   ######
-###########################
-# 'xorg' 
-# 'plasma' 
-# 'kde-applications' 
-# 'simplescreenrecorder' 
-# 'papirus-icon-theme' 
-# 'kdenlive' 
-# 'materia-kde'
-
+'neovim'
 )
 
 for PKG in "${PKGS[@]}"; do
@@ -247,8 +183,11 @@ fi
 ############################################################################################################
 ################################   BOOT LOADER   ###########################################################
 ############################################################################################################
+mkdir -p /boot/EFI/BOOT
+cp /usr/share/limine/BOOTX64.EFI
 
-
+blkid >> /boot/limine.cfg
+nvim /boot/limine.cfg
 
 ############################################################################################################
 ########################   CREATE USER   ###################################################################
@@ -257,17 +196,19 @@ echo "CREATING USER"
 echo "Change root password:"
 passwd
 
-if ! source ${HOME}/dotfiles/arch/user.conf; then
+if ! source /root/user.conf; then
 	read -p "Please enter username:" username
-    echo "username=$username" >> ${HOME}/dotfiles/arch/user.conf
+    echo "username=$username" >> /root/user.conf
 fi
 if [ $(whoami) = "root"  ];
 then
     useradd -m -G wheel -s /bin/bash $username 
 	echo "Change $username password:"
 	passwd $username
-	cp -R /root/dotfiles/ /home/$username/
-    chown -R $username: /home/$username/dotfiles
 else
 	echo "You are already a user proceed with aur installs"
 fi
+
+echo "###########################"
+echo "### Stage 1 completed #####"
+echo "###########################"

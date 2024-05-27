@@ -71,3 +71,7 @@ systemctl enable cups.service
 
 mkinitcpio -P           #recreate all kernel modules
 #mkinitcpio -p linux    #recreate linux kernel modules
+
+echo "###########################"
+echo "### Stage 3 completed #####"
+echo "###########################"

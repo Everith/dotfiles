@@ -49,5 +49,13 @@ pacstrap /mnt base base-devel linux linux-firmware neovim --noconfirm
 genfstab -U /mnt >> /mnt/etc/fstab
 
 
-cp -R ~/dotfiles /mnt/root/
+cp -R ~/dotfiles/scrips/scrips/arch/0.sh /mnt/root/
+cp -R ~/dotfiles/scrips/scrips/arch/1.sh /mnt/root/
+cp -R ~/dotfiles/scrips/scrips/arch/2.sh /mnt/root/
+cp -R ~/dotfiles/scrips/scrips/arch/3.sh /mnt/root/
+cp -R ~/dotfiles/scrips/scrips/arch/limine-config/limine.cfg /mnt/boot/
 cp /etc/pacman.d/mirrorlist /mnt/etc/pacman.d/mirrorlist
+
+echo "###########################"
+echo "### Stage 0 completed #####"
+echo "###########################"
