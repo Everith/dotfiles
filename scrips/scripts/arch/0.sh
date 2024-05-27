@@ -37,7 +37,7 @@ sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | fdisk ${DRIVE}
 EOF
 
 # Format the partitions
-mkfs.fat -L boot ${DRIVE}1
+mkfs.fat -F32 ${DRIVE}1
 mkfs.ext4 -L root ${DRIVE}2
 
 mount ${DRIVE}2 /mnt
