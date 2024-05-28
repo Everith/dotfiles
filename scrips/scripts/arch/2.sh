@@ -2,7 +2,7 @@
 
 cd ~
 git clone "https://aur.archlinux.org/yay.git"
-cd ${HOME}/yay
+cd ~/yay
 makepkg -si --noconfirm
 
 PKGS=(

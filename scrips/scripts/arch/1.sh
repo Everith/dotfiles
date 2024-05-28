@@ -38,7 +38,7 @@ sed -i 's/^# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/' /et
 #ADD PARALEL DOWNLOADING
 sed -i 's/^#Para/Para/' /etc/pacman.conf
 #Enable multilib
-sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
+#sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 pacman -Sy --noconfirm
 
 ############################################################################################################
@@ -66,88 +66,85 @@ PKGS=(
 'linux-zen-headers'                                  # Headers and scripts for building modules for the Linux ZEN kernel
 'networkmanager'                                     # Network connection manager and user applications
 'network-manager-applet'
-'os-prober' 
-'pipewire'
-'pipewire-alsa'
-'pipewire-pulse'
-'pipewire-jack'
-'pavucontrol'
-'wireplumber'
-'pamixer'
-'limine'
+#'os-prober' 
+#'pipewire'
+#'pipewire-alsa'
+#'pipewire-pulse'
+#'pipewire-jack'
+#'pavucontrol'
+#'wireplumber'
+#'pamixer'
 ###########################
 ####   Applications   #####
 ###########################
-'man-db'                                             # Man page
-'openssh'                                            # Premier connectivity tool for remote login with the SSH protocol
-'git'                                                # the fast distributed version control system
 'bash'                                               # The GNU Bourne Again shell'bash-completion'                                    # Programmable completion for the bash shell
+'man-db'                                             # Man page
 'wget'                                               # Network utility to retrieve files from the Web
 'curl'                                               # An URL retrieval utility and library
+'unzip'
+'zsh'
+'stow'
+'git'                                                # the fast distributed version control system
+'kitty'
+'neovim'
+'openssh'                                            # Premier connectivity tool for remote login with the SSH protocol
 'btop'                                               # Interactive process viewer
+'firefox'
+'exa'
 'ffmpeg'                                             # Complete solution to record, convert and stream audio and video
 'ffmpegthumbnailer'                                  # Lightweight video thumbnailer that can be used by file managers.
-'powertop'
-'firefox'
-'stow'
-'gamemode'
-'kitty'
-'picom'
-'cups'                                              #printer service 
-'btop'
-'stow'
-'syncthing'
-'zsh'
-'exa'
-'swaybar'
-'bitwarden'
-'wofi'
-'discord'
-'thunar'
-'thunar-volman'
-'thunar-archive-plugin'
-'gvfs'
-'gvfs-smb'
-'gvfs-mtp'
-'sshfs'
-'tumbler'
-'feh'
-'ripgrep'
-'playerctl'
-'jq'
-'polkit-gnome'
-'gnome-control-center'
-'file-roller'
-'xdg-user-dirs'
-'wf-recorder'
-'dbus-python'
-'python-gobject'
-'python-requests'
-'python-jinja'
-'zenity'
-'socat'
-'clang'
-'npm'
-'unzip'
-'zenity'
-'socat'
-'xdg-desktop-portal-hyprland'
-'xorg-xwayland'
-'qt5-wayland'
-'qt6-wayland'
-'qt5ct'
-'qt6ct'
-'libva'
-'linux-headers'
 'noto-fonts-cjk' # japanese chars
 'noto-fonts-emoji' # japanese chars
 'noto-fonts' # japanese chars
-'sshfs'
-'gvfs-mtp'
-'thunar-volman'
-'cdrtools'
-'cdrdao'
-'neovim'
+#'powertop'
+#'gamemode'
+#'picom'
+#'cups'                                              #printer service 
+#'syncthing'
+#'swaybar'
+#'bitwarden'
+#'wofi'
+#'discord'
+#'thunar'
+#'thunar-volman'
+#'thunar-archive-plugin'
+#'gvfs'
+#'gvfs-smb'
+#'gvfs-mtp'
+#'sshfs'
+#'tumbler'
+#'feh'
+#'ripgrep'
+#'playerctl'
+#'jq'
+#'polkit-gnome'
+#'gnome-control-center'
+#'file-roller'
+#'xdg-user-dirs'
+#'wf-recorder'
+#'dbus-python'
+#'python-gobject'
+#'python-requests'
+#'python-jinja'
+#'zenity'
+#'socat'
+#'clang'
+#'npm'
+#'zenity'
+#'socat'
+#'xdg-desktop-portal-hyprland'
+#'xorg-xwayland'
+#'qt5-wayland'
+#'qt6-wayland'
+#'qt5ct'
+#'qt6ct'
+#'libva'
+#'linux-headers'
+#'sshfs'
+#'gvfs-mtp'
+#'thunar-volman'
+#'cdrtools'
+#'cdrdao'
 )
 
 for PKG in "${PKGS[@]}"; do
@@ -183,10 +180,12 @@ fi
 ############################################################################################################
 ################################   BOOT LOADER   ###########################################################
 ############################################################################################################
+pacman -S limine --noconfirm
 mkdir -p /boot/EFI/BOOT
 cp /usr/share/limine/BOOTX64.EFI
 
 blkid >> /boot/limine.cfg
+echo "copy /dev/sda2 GUID to the bootloader" >> /boot/limine.cfg
 nvim /boot/limine.cfg
 
 ############################################################################################################
@@ -208,6 +207,8 @@ then
 else
 	echo "You are already a user proceed with aur installs"
 fi
+
+cp /root/2.sh /home/$username/
 
 echo "###########################"
 echo "### Stage 1 completed #####"
