@@ -28,7 +28,7 @@ echo "$hostname" > /etc/hostname
 ############################################################################################################
 ####################################   PACMAN   ############################################################
 ############################################################################################################
-#echo "ILoveCandy" >> /etc/pacman.conf #wrong line 
+echo "ILoveCandy" >> /etc/pacman.conf #wrong line 
 pacman -S --noconfirm pacman-contrib curl
 pacman -S --noconfirm reflector archlinux-keyring
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak #CREATE A BACKUP FROM MIRRORLIST JUST IN CASE 
@@ -37,7 +37,6 @@ cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak #CREATE A BACKUP FROM M
 sed -i 's/^# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/' /etc/sudoers
 #ADD PARALEL DOWNLOADING
 sed -i 's/^#Para/Para/' /etc/pacman.conf
-echo "ILoveCandy" >> /etc/pacman.conf
 #Enable multilib
 #sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 pacman -Sy --noconfirm
@@ -53,8 +52,6 @@ sudo sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j$nc"/g' /etc/makepkg.conf
 echo "Changing the compression settings for "$nc" cores."
 sudo sed -i 's/COMPRESSXZ=(xz -c -z -)/COMPRESSXZ=(xz -c -T $nc -z -)/g' /etc/makepkg.conf
 ############################################################################################################
-
-sudo pacman -S base base-devel linux linux-firmware linux-headers linux-zen linux-zen-headers networkmanager network-manager-applet pipewire pipewire-alsa pipewire-pulse pipewire-jack pavucontrol wireplumber pamixer neovim clang npm ripgrep tree-sitter python rustup nodejs hyprland wofi thunar thunar-volman thunar-archive-plugin tumbler feh firefox kitty waybar cups openssh man-db wget unzip zsh exa stow git btop ffmpeg ffmpegthumbnailer noto-fonts-cjk noto-fonts-emoji noto-fonts powertop syncthing bitwarden discord --needed --noconfirm
 
 PKGS=(
 ###########################
@@ -124,10 +121,10 @@ PKGS=(
 'discord'
 )
 
-#for PKG in "${PKGS[@]}"; do
-#    echo "INSTALLING: ${PKG}"
-#    sudo pacman -S "$PKG" --needed --noconfirm
-#done
+for PKG in "${PKGS[@]}"; do
+    echo "INSTALLING: ${PKG}"
+    sudo pacman -S "$PKG" --needed --noconfirm
+done
 
 # determine processor type and install microcode
 proc_type=$(lscpu | awk '/Vendor ID:/ {print $3}')
@@ -168,6 +165,12 @@ nvim /boot/limine.cfg
 ############################################################################################################
 ########################   CREATE USER   ###################################################################
 ############################################################################################################
+cp /bin/nvim /usr/bin/vi
+visudo
+
+############################################################################################################
+########################   CREATE USER   ###################################################################
+############################################################################################################
 echo "CREATING USER"
 echo "Change root password:"
 passwd
@@ -187,6 +190,7 @@ fi
 
 cp /root/2.sh /home/$username/
 chown -R $username:$username /home/$username
+chsh erik -s /bin/zsh
 
 echo "###########################"
 echo "### Stage 1 completed #####"
