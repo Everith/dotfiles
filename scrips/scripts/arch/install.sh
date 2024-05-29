@@ -9,4 +9,4 @@ arch-chroot /mnt bash /root/3.sh
 echo "#############################"
 echo "# Installation is completed #"
 echo "#############################"
-#reboot
+reboot
