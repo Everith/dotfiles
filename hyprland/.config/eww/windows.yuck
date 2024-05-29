@@ -1,7 +1,6 @@
 (defwindow bar
     :monitor 0
-    :geometry (geometry :width "100%"
-                        :anchor "bottom center")
+    :geometry (geometry :width "70%" :anchor "bottom center") 
     :exclusive true
     :namespace "eww"
     (bar)
@@ -10,9 +9,7 @@
 (defwindow control_center
     :monitor 0
     :stacking "overlay"
-    :geometry (geometry
-                    :anchor "bottom right"
-                )
+    :geometry (geometry :anchor "bottom center")
     :namespace "eww"
     (control_center)
 )
@@ -20,9 +17,7 @@
 (defwindow launcher
     :monitor 0
     :stacking "overlay"
-    :geometry (geometry
-                    :anchor "left bottom"
-                )
+    :geometry (geometry :width "1o0%" :anchor "left bottom")
     :focusable true
     :namespace "eww"
     (launcher)
@@ -31,9 +26,7 @@
 (defwindow notifications_popup
     :monitor 0
     :stacking "overlay"
-    :geometry (geometry
-                    :anchor "top center"
-                )
+    :geometry (geometry :anchor "top center")
     :namespace "eww"
     (notifications_popup_widget)
 )
@@ -41,8 +34,7 @@
 (defwindow osd
     :monitor 0
     :stacking "overlay"
-    :geometry (geometry 
-                    :anchor "bottom center")
+    :geometry (geometry :anchor "bottom center") 
     :namespace "eww"
     (volume_osd)
 )
