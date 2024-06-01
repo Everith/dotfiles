@@ -73,6 +73,9 @@ PKGS=(
 'pavucontrol'
 'wireplumber'
 'pamixer'
+'plymouth' # boot animation splash screen
+'cronie' # crontab scheduler
+
 ###########################
 ####   Applications   #####
 ###########################
@@ -94,6 +97,9 @@ PKGS=(
 'thunar-archive-plugin'
 'tumbler'
 'feh'
+'lz4' #LZ4 - Extremely fast compression
+'gvfs' #thunar dependenci for trash handling
+'swaync'
 #'picom'
 'firefox'
 'kitty'

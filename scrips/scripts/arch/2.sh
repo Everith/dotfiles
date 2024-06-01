@@ -10,7 +10,7 @@ PKGS=(
 'ttf-hack'
 'adw-gtk3-git'
 'eww-tray-wayland-git'
-'swww'
+'swww' # Wallpaper application
 'grimblast-git'
 'python-material-color-utilities'
 'hyprpicker-git'
