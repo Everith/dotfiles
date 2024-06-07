@@ -96,6 +96,7 @@ PKGS=(
 'thunar-volman'
 'thunar-archive-plugin'
 'tumbler'
+'gvfs-smb'
 'feh'
 'lz4' #LZ4 - Extremely fast compression
 'gvfs' #thunar dependenci for trash handling

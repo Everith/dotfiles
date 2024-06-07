@@ -1,0 +1,21 @@
+(defwidget system []
+  (box 
+    :class "bar-widget" 
+    :orientation "h" 
+    :space-evenly false 
+    (box 
+      :orientation "h" 
+      :space-evenly false 
+      :halign "center"
+      (taskbar)
+    )
+    (box 
+      :orientation "h" 
+      :space-evenly false 
+      :halign "end"
+      (tray_button)
+      (language)
+      (indicator)
+    )
+  )
+)
