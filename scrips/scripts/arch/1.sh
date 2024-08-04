@@ -29,6 +29,7 @@ echo "$hostname" > /etc/hostname
 ####################################   PACMAN   ############################################################
 ############################################################################################################
 echo "ILoveCandy" >> /etc/pacman.conf #wrong line 
+nvim /etc/pacman.conf
 pacman -S --noconfirm pacman-contrib curl
 pacman -S --noconfirm reflector archlinux-keyring
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak #CREATE A BACKUP FROM MIRRORLIST JUST IN CASE 
@@ -75,6 +76,18 @@ PKGS=(
 'pamixer'
 'plymouth' # boot animation splash screen
 'cronie' # crontab scheduler
+'bluez'
+'bluez-utils'
+'cups'                                              #printer service 
+'openssh'                                            # Premier connectivity tool for remote login with the SSH protocol
+'man-db'                                             # Man page
+'wget'                                               # Network utility to retrieve files from the Web
+'unzip'
+'zsh'
+'exa'
+'stow'
+'git'                                                # the fast distributed version control system
+'btop'                                               # Interactive process viewer
 
 ###########################
 ####   Applications   #####
@@ -106,16 +119,6 @@ PKGS=(
 'kitty'
 'waybar'
 
-'cups'                                              #printer service 
-'openssh'                                            # Premier connectivity tool for remote login with the SSH protocol
-'man-db'                                             # Man page
-'wget'                                               # Network utility to retrieve files from the Web
-'unzip'
-'zsh'
-'exa'
-'stow'
-'git'                                                # the fast distributed version control system
-'btop'                                               # Interactive process viewer
 'ffmpeg'                                             # Complete solution to record, convert and stream audio and video
 'ffmpegthumbnailer'                                  # Lightweight video thumbnailer that can be used by file managers.
 'noto-fonts-cjk' # japanese chars
