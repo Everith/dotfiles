@@ -1,12 +1,17 @@
-#! /bin/bash
+#!/bin/bash
+
+############################################################################################################
+########################   ARCH OS ROOT USER  ##############################################################
+############################################################################################################
+
 
 hostname=evdev
 ############################################################################################################
 ############################   LANGUAGE AND LOCAL  #########################################################
 ############################################################################################################
 timedatectl --no-ask-password set-ntp 1
-sed -i 's/^#hu_HU.UTF-8 UTF-8/hu_HU.UTF-8 UTF-8/' /etc/locale.gen #uncomment line in file 
-sed -i 's/^#hu_HU ISO-8859-2/hu_HU ISO-8859-2/' /etc/locale.gen #uncomment line in file 
+sed -i 's/^#hu_HU.UTF-8 UTF-8/hu_HU.UTF-8 UTF-8/g' /etc/locale.gen #uncomment line in file 
+sed -i 's/^#hu_HU ISO-8859-2/hu_HU ISO-8859-2/g' /etc/locale.gen #uncomment line in file 
 locale-gen
 ln -sf /usr/share/zoneinfo/Europe/Budapest /etc/localtime
 
@@ -34,9 +39,9 @@ pacman -S --noconfirm reflector archlinux-keyring
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak #CREATE A BACKUP FROM MIRRORLIST JUST IN CASE 
 
 #ENABLE PASSWORDLESS SUDO
-sed -i 's/^# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/' /etc/sudoers
+sed -i 's/^# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/g' /etc/sudoers
 #ADD PARALEL DOWNLOADING
-sed -i 's/^#Para/Para/' /etc/pacman.conf
+sed -i 's/^#Para/Para/g' /etc/pacman.conf
 #Enable multilib
 #sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 pacman -Sy --noconfirm
@@ -66,16 +71,27 @@ PKGS=(
 'linux-zen-headers'                                  # Headers and scripts for building modules for the Linux ZEN kernel
 'networkmanager'                                     # Network connection manager and user applications
 'network-manager-applet'
-#'os-prober' 
-#'pipewire'
-#'pipewire-alsa'
-#'pipewire-pulse'
-#'pipewire-jack'
-#'pavucontrol'
-#'wireplumber'
-#'pamixer'
+'os-prober' 
+'pipewire'
+'pipewire-alsa'
+'pipewire-pulse'
+'pipewire-jack'
+'pavucontrol'
+'wireplumber'
+'pamixer'
 ###########################
-####   Applications   #####
+####   Programing     #####
+###########################
+'git'                                                # the fast distributed version control system
+'jq'
+'clang'
+'npm'
+'python'
+'rustup'
+'go'
+'nodejs'
+###########################
+### Basic Applications ####
 ###########################
 'bash'                                               # The GNU Bourne Again shell'bash-completion'                                    # Programmable completion for the bash shell
 'man-db'                                             # Man page
@@ -84,39 +100,39 @@ PKGS=(
 'unzip'
 'zsh'
 'stow'
-'git'                                                # the fast distributed version control system
 'kitty'
 'neovim'
+'exa'
 'openssh'                                            # Premier connectivity tool for remote login with the SSH protocol
 'btop'                                               # Interactive process viewer
 'firefox'
-'exa'
 'ffmpeg'                                             # Complete solution to record, convert and stream audio and video
 'ffmpegthumbnailer'                                  # Lightweight video thumbnailer that can be used by file managers.
 'noto-fonts-cjk' # japanese chars
 'noto-fonts-emoji' # japanese chars
 'noto-fonts' # japanese chars
-#'powertop'
-#'gamemode'
-#'picom'
-#'cups'                                              #printer service 
-#'syncthing'
-#'swaybar'
-#'bitwarden'
-#'wofi'
-#'discord'
-#'thunar'
-#'thunar-volman'
-#'thunar-archive-plugin'
-#'gvfs'
-#'gvfs-smb'
-#'gvfs-mtp'
-#'sshfs'
-#'tumbler'
-#'feh'
-#'ripgrep'
-#'playerctl'
-#'jq'
+'cups'                                              #printer service 
+'thunar'
+'thunar-volman'
+'thunar-archive-plugin'
+'gvfs'
+'gvfs-smb'
+'gvfs-mtp'
+'sshfs'
+'tumbler'
+'feh'
+'ripgrep'
+###########################
+####   Applications   #####
+###########################
+'powertop'
+'picom'
+'syncthing'
+'swaybar'
+'bitwarden'
+'wofi'
+'discord'
+'playerctl'
 #'polkit-gnome'
 #'gnome-control-center'
 #'file-roller'
@@ -128,8 +144,6 @@ PKGS=(
 #'python-jinja'
 #'zenity'
 #'socat'
-#'clang'
-#'npm'
 #'zenity'
 #'socat'
 #'xdg-desktop-portal-hyprland'
@@ -139,12 +153,8 @@ PKGS=(
 #'qt5ct'
 #'qt6ct'
 #'libva'
-#'linux-headers'
 #'sshfs'
 #'gvfs-mtp'
-#'thunar-volman'
-#'cdrtools'
-#'cdrdao'
 )
 
 for PKG in "${PKGS[@]}"; do
@@ -184,9 +194,21 @@ pacman -S limine --noconfirm
 mkdir -p /boot/EFI/BOOT
 cp /usr/share/limine/BOOTX64.EFI
 
-blkid >> /boot/limine.cfg
-echo "copy /dev/sda2 GUID to the bootloader" >> /boot/limine.cfg
-nvim /boot/limine.cfg
+#sed -i 's/^#Para/Para/g' /etc/pacman.conf
+UUID=$(blkid /dev/sda2 | grep UUID | cut -d '"' -f 4)
+sed -i "s/rrrrrrrr-rrrr-rrrr-rrrr-rrrrrrrrrrrr/$UUID/" test.conf
+# nvim /boot/limine.cfg
+
+############################################################################################################
+########################   UPDATE FSTAB  ###################################################################
+############################################################################################################
+# Behemoth servers
+# //behemoth.local/server 	/mnt/server     cifs            username=erik,pass=Behemetara987321654,rw	0 0
+# //behemoth.local/dev    	/mnt/dev        cifs            username=erik,pass=Behemetara987321654,rw	0 0
+# //behemoth.local/media  	/mnt/media      cifs            username=erik,pass=Behemetara987321654,rw	0 0
+# //behemoth.local/novels 	/mnt/novels     cifs            username=erik,pass=Behemetara987321654,rw	0 0
+# //behemoth.local/torrent 	/mnt/torrent   	cifs            username=erik,pass=Behemetara987321654,rw	0 0
+# //behemoth.local/games  	/mnt/games      cifs            username=erik,pass=Behemetara987321654,rw	0 0
 
 ############################################################################################################
 ########################   CREATE USER   ###################################################################
@@ -207,6 +229,28 @@ then
 else
 	echo "You are already a user proceed with aur installs"
 fi
+
+case "$choice" in
+    a|A)
+		echo "Automatic ROOT password and user creatin WIP."
+      	;;
+
+    b|B)
+		echo "You chose option B."
+      	;;
+
+    c|C)
+        echo "You chose option C."
+        ;;
+
+    d|D)
+        echo "You chose option D."
+        ;;
+
+    *)
+        echo "Invalid choice. Please choose a, b, c, or d."
+        ;;
+esac
 
 cp /root/2.sh /home/$username/
 
