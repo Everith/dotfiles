@@ -233,6 +233,7 @@ fi
 case "$choice" in
     a|A)
 		echo "Automatic ROOT password and user creatin WIP."
+		sleep 10
       	;;
 
     b|B)
