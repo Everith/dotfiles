@@ -10,3 +10,7 @@ echo "#############################"
 echo "# Installation is completed #"
 echo "#############################"
 #reboot
+
+cat /mnt/etc/fstab
+echo "###"
+cat /mnt/boot/limine.conf
