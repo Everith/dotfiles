@@ -40,7 +40,7 @@ case "$choice" in
       p # print the in-memory partition table
       w # write the partition table
       q # and we're done
-
+EOF
       # Format the partitions
       mkfs.fat -F32 /dev/sda1
       mkfs.ext4 -L root /dev/sda2
@@ -76,7 +76,7 @@ case "$choice" in
       p # print the in-memory partition table
       w # write the partition table
       q # and we're done
-
+EOF
       # Format the partitions
       mkfs.fat -F32 ${DRIVE}1
       mkfs.ext4 -L root ${DRIVE}2
