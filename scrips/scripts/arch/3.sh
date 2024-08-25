@@ -45,7 +45,7 @@
 ############################################################################################################
 systemctl enable NetworkManager
 #systemctl enable bluetooth
-systemctl enable cups.service
+#systemctl enable cups.service
 #systemctl enable sshd
 #systemctl enable avahi-daemon
 #systemctl enable tlp # You can comment this command out if you didn't install tlp, see above
@@ -71,6 +71,8 @@ systemctl enable cups.service
 
 mkinitcpio -P           #recreate all kernel modules
 #mkinitcpio -p linux    #recreate linux kernel modules
+
+chown -R $username:$username /home/$username
 
 echo "###########################"
 echo "### Stage 3 completed #####"

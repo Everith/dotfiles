@@ -69,6 +69,7 @@ PKGS=(
 'linux-headers'                                      # Headers and scripts for building modules for the Linux kernel
 'linux-zen'                                          # The Linux ZEN kernel and modules
 'linux-zen-headers'                                  # Headers and scripts for building modules for the Linux ZEN kernel
+'limine'
 'networkmanager'                                     # Network connection manager and user applications
 'network-manager-applet'
 'os-prober' 
@@ -190,9 +191,8 @@ fi
 ############################################################################################################
 ################################   BOOT LOADER   ###########################################################
 ############################################################################################################
-pacman -S limine --noconfirm
 mkdir -p /boot/EFI/BOOT
-cp /usr/share/limine/BOOTX64.EFI
+cp /usr/share/limine/BOOTX64.EFI /boot/EFI/BOOT/
 
 UUID=$(blkid /dev/sda2 | grep UUID | cut -d '"' -f 4)
 sed -i "s/XXXXXXXXXXXXXXX/$UUID/" /boot/limine.cfg
@@ -228,33 +228,8 @@ else
 	echo "You are already a user proceed with aur installs"
 fi
 
-case "$choice" in
-    a|A)
-		echo "Automatic ROOT password and user creatin WIP."
-		echo "############################################################################################################"
-		echo "######################## Automatic ROOT password and user creatin WIP ######################################"
-		echo "############################################################################################################"
-		sleep 10
-      	;;
-
-    b|B)
-		echo "You chose option B."
-      	;;
-
-    c|C)
-        echo "You chose option C."
-        ;;
-
-    d|D)
-        echo "You chose option D."
-        ;;
-
-    *)
-        echo "Invalid choice. Please choose a, b, c, or d."
-        ;;
-esac
-
 cp /root/2.sh /home/$username/
+chown -R $username:$username /home/$username
 
 echo "###########################"
 echo "### Stage 1 completed #####"
