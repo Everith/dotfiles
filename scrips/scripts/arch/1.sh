@@ -194,21 +194,19 @@ pacman -S limine --noconfirm
 mkdir -p /boot/EFI/BOOT
 cp /usr/share/limine/BOOTX64.EFI
 
-#sed -i 's/^#Para/Para/g' /etc/pacman.conf
 UUID=$(blkid /dev/sda2 | grep UUID | cut -d '"' -f 4)
-sed -i "s/rrrrrrrr-rrrr-rrrr-rrrr-rrrrrrrrrrrr/$UUID/" test.conf
-# nvim /boot/limine.cfg
+sed -i "s/XXXXXXXXXXXXXXX/$UUID/" /boot/limine.cfg
 
 ############################################################################################################
 ########################   UPDATE FSTAB  ###################################################################
 ############################################################################################################
 # Behemoth servers
-# //behemoth.local/server 	/mnt/server     cifs            username=erik,pass=Behemetara987321654,rw	0 0
-# //behemoth.local/dev    	/mnt/dev        cifs            username=erik,pass=Behemetara987321654,rw	0 0
-# //behemoth.local/media  	/mnt/media      cifs            username=erik,pass=Behemetara987321654,rw	0 0
-# //behemoth.local/novels 	/mnt/novels     cifs            username=erik,pass=Behemetara987321654,rw	0 0
-# //behemoth.local/torrent 	/mnt/torrent   	cifs            username=erik,pass=Behemetara987321654,rw	0 0
-# //behemoth.local/games  	/mnt/games      cifs            username=erik,pass=Behemetara987321654,rw	0 0
+echo "//behemoth.local/server 	/mnt/server     cifs            username=erik,pass=Behemetara987321654,rw	0 0" >> /etc/fstab
+echo "//behemoth.local/dev    	/mnt/dev        cifs            username=erik,pass=Behemetara987321654,rw	0 0" >> /etc/fstab
+echo "//behemoth.local/media  	/mnt/media      cifs            username=erik,pass=Behemetara987321654,rw	0 0" >> /etc/fstab
+echo "//behemoth.local/novels 	/mnt/novels     cifs            username=erik,pass=Behemetara987321654,rw	0 0" >> /etc/fstab
+echo "//behemoth.local/torrent 	/mnt/torrent   	cifs            username=erik,pass=Behemetara987321654,rw	0 0" >> /etc/fstab
+echo "//behemoth.local/games  	/mnt/games      cifs            username=erik,pass=Behemetara987321654,rw	0 0" >> /etc/fstab
 
 ############################################################################################################
 ########################   CREATE USER   ###################################################################
@@ -233,6 +231,9 @@ fi
 case "$choice" in
     a|A)
 		echo "Automatic ROOT password and user creatin WIP."
+		echo "############################################################################################################"
+		echo "######################## Automatic ROOT password and user creatin WIP ######################################"
+		echo "############################################################################################################"
 		sleep 10
       	;;
 
