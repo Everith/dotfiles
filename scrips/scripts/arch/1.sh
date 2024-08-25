@@ -4,14 +4,13 @@
 ########################   ARCH OS ROOT USER  ##############################################################
 ############################################################################################################
 
-
 hostname=evdev
 ############################################################################################################
 ############################   LANGUAGE AND LOCAL  #########################################################
 ############################################################################################################
 timedatectl --no-ask-password set-ntp 1
-sed -i 's/^#hu_HU.UTF-8 UTF-8/hu_HU.UTF-8 UTF-8/g' /etc/locale.gen #uncomment line in file 
-sed -i 's/^#hu_HU ISO-8859-2/hu_HU ISO-8859-2/g' /etc/locale.gen #uncomment line in file 
+sed -i 's/^#hu_HU.UTF-8 UTF-8/hu_HU.UTF-8 UTF-8/' /etc/locale.gen #uncomment line in file 
+sed -i 's/^#hu_HU ISO-8859-2/hu_HU ISO-8859-2/' /etc/locale.gen #uncomment line in file 
 locale-gen
 ln -sf /usr/share/zoneinfo/Europe/Budapest /etc/localtime
 
@@ -201,12 +200,12 @@ sed -i "s/XXXXXXXXXXXXXXX/$UUID/" /boot/limine.cfg
 ########################   UPDATE FSTAB  ###################################################################
 ############################################################################################################
 # Behemoth servers
-echo "//behemoth.local/server 	/mnt/server     cifs            username=erik,pass=Behemetara987321654,rw	0 0" >> /etc/fstab
-echo "//behemoth.local/dev    	/mnt/dev        cifs            username=erik,pass=Behemetara987321654,rw	0 0" >> /etc/fstab
-echo "//behemoth.local/media  	/mnt/media      cifs            username=erik,pass=Behemetara987321654,rw	0 0" >> /etc/fstab
-echo "//behemoth.local/novels 	/mnt/novels     cifs            username=erik,pass=Behemetara987321654,rw	0 0" >> /etc/fstab
-echo "//behemoth.local/torrent 	/mnt/torrent   	cifs            username=erik,pass=Behemetara987321654,rw	0 0" >> /etc/fstab
-echo "//behemoth.local/games  	/mnt/games      cifs            username=erik,pass=Behemetara987321654,rw	0 0" >> /etc/fstab
+# echo "//behemoth.local/server 	/mnt/server     cifs            username=erik,pass=Behemetara987321654,rw	0 0" >> /etc/fstab
+# echo "//behemoth.local/dev    	/mnt/dev        cifs            username=erik,pass=Behemetara987321654,rw	0 0" >> /etc/fstab
+# echo "//behemoth.local/media  	/mnt/media      cifs            username=erik,pass=Behemetara987321654,rw	0 0" >> /etc/fstab
+# echo "//behemoth.local/novels 	/mnt/novels     cifs            username=erik,pass=Behemetara987321654,rw	0 0" >> /etc/fstab
+# echo "//behemoth.local/torrent 	/mnt/torrent   	cifs            username=erik,pass=Behemetara987321654,rw	0 0" >> /etc/fstab
+# echo "//behemoth.local/games  	/mnt/games      cifs            username=erik,pass=Behemetara987321654,rw	0 0" >> /etc/fstab
 
 ############################################################################################################
 ########################   CREATE USER   ###################################################################
