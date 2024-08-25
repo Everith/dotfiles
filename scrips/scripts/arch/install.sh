@@ -13,4 +13,4 @@ echo "#############################"
 
 cat /mnt/etc/fstab
 echo "###"
-cat /mnt/boot/limine.conf
+cat /mnt/boot/limine.cfg
