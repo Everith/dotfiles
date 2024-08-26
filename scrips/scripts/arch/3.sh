@@ -37,7 +37,13 @@
 #####################################   fstab   ############################################################
 ############################################################################################################
 #network location example:
-#//192.168.1.100/Downloads  /Server cifs    credentials=/root/servercreds,uid=1000,iocharset=utf8,vers=2.0  0   0
+# //192.168.1.100/Downloads  /Server cifs    credentials=/root/servercreds,uid=1000,iocharset=utf8,vers=2.0  0   0
+# Behemoth servers
+# echo "//behemoth.local/server 	/Server/server     cifs            credentials=/root/servercreds,uid=1000,iocharset=utf8,vers=2.0,rw	0 0" >> /etc/fstab
+# echo "//behemoth.local/dev    	/Server/dev        cifs            credentials=/root/servercreds,uid=1000,iocharset=utf8,vers=2.0,rw	0 0" >> /etc/fstab
+# echo "//behemoth.local/media  	/Server/media      cifs            credentials=/root/servercreds,uid=1000,iocharset=utf8,vers=2.0,rw	0 0" >> /etc/fstab
+# echo "//behemoth.local/novels 	/Server/novels     cifs            credentials=/root/servercreds,uid=1000,iocharset=utf8,vers=2.0,rw	0 0" >> /etc/fstab
+# echo "//behemoth.local/games  	/Server/games      cifs            credentials=/root/servercreds,uid=1000,iocharset=utf8,vers=2.0,rw	0 0" >> /etc/fstab
 
 
 ############################################################################################################
@@ -68,7 +74,7 @@ systemctl enable NetworkManager
 # BTRFS
 #sed -i 's/HOOKS=(base udev autodetect modconf block filesystems keyboard fsck)/HOOKS=(base udev autodetect modconf block filesystems keyboard)/' /etc/mkinitcpio.conf 
 #sed -i 's/MODULES=()/MODULES=(btrfs)/' /etc/mkinitcpio.conf 
-
+sleep 10
 mkinitcpio -P           #recreate all kernel modules
 #mkinitcpio -p linux    #recreate linux kernel modules
 
@@ -77,3 +83,4 @@ chown -R $username:$username /home/$username
 echo "###########################"
 echo "### Stage 3 completed #####"
 echo "###########################"
+sleep 20

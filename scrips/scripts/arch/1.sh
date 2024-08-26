@@ -199,13 +199,6 @@ sed -i "s/XXXXXXXXXXXXXXX/$UUID/" /boot/limine.cfg
 ############################################################################################################
 ########################   UPDATE FSTAB  ###################################################################
 ############################################################################################################
-# Behemoth servers
-# echo "//behemoth.local/server 	/mnt/server     cifs            username=erik,pass=Behemetara987321654,rw	0 0" >> /etc/fstab
-# echo "//behemoth.local/dev    	/mnt/dev        cifs            username=erik,pass=Behemetara987321654,rw	0 0" >> /etc/fstab
-# echo "//behemoth.local/media  	/mnt/media      cifs            username=erik,pass=Behemetara987321654,rw	0 0" >> /etc/fstab
-# echo "//behemoth.local/novels 	/mnt/novels     cifs            username=erik,pass=Behemetara987321654,rw	0 0" >> /etc/fstab
-# echo "//behemoth.local/torrent 	/mnt/torrent   	cifs            username=erik,pass=Behemetara987321654,rw	0 0" >> /etc/fstab
-# echo "//behemoth.local/games  	/mnt/games      cifs            username=erik,pass=Behemetara987321654,rw	0 0" >> /etc/fstab
 
 ############################################################################################################
 ########################   CREATE USER   ###################################################################
