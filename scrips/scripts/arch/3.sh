@@ -78,13 +78,10 @@ echo "###########################"
 echo "### Stage 3 ...       #####"
 echo "###########################"
 
-sleep 10
 mkinitcpio -P           #recreate all kernel modules
 #mkinitcpio -p linux    #recreate linux kernel modules
 
 chown -R $username:$username /home/$username
-
 echo "###########################"
 echo "### Stage 3 completed #####"
 echo "###########################"
-sleep 20

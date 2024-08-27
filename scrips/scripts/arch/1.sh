@@ -17,8 +17,8 @@ ln -sf /usr/share/zoneinfo/Europe/Budapest /etc/localtime
 ############################################################################################################
 ############################   KEYBOARD AND FONT  ##########################################################
 ############################################################################################################
-# echo "KEYMAP=uk" > /etc/vconsole.conf
-# echo "FONT=Hack NF" >> /etc/vconsole.conf
+echo "KEYMAP=uk" > /etc/vconsole.conf
+echo "FONT=Hack NF" >> /etc/vconsole.conf
 
 ############################################################################################################
 ####################################   NETWORK   ###########################################################
@@ -47,13 +47,13 @@ pacman -Suy --noconfirm
 ############################################################################################################
 ############################################################################################################
 #GET INFO FROM CPU #TODO
-# nc=$(grep -c ^processor /proc/cpuinfo)
-# echo "You have " $nc" cores."
-# echo "-------------------------------------------------"
-# echo "Changing the makeflags for "$nc" cores."
-# sudo sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j$nc"/g' /etc/makepkg.conf
-# echo "Changing the compression settings for "$nc" cores."
-# sudo sed -i 's/COMPRESSXZ=(xz -c -z -)/COMPRESSXZ=(xz -c -T $nc -z -)/g' /etc/makepkg.conf
+nc=$(grep -c ^processor /proc/cpuinfo)
+echo "You have " $nc" cores."
+echo "-------------------------------------------------"
+echo "Changing the makeflags for "$nc" cores."
+sudo sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j$nc"/g' /etc/makepkg.conf
+echo "Changing the compression settings for "$nc" cores."
+sudo sed -i 's/COMPRESSXZ=(xz -c -z -)/COMPRESSXZ=(xz -c -T $nc -z -)/g' /etc/makepkg.conf
 ############################################################################################################
 
 PKGS=(
@@ -162,29 +162,29 @@ for PKG in "${PKGS[@]}"; do
 done
 
 # determine processor type and install microcode
-# proc_type=$(lscpu | awk '/Vendor ID:/ {print $3}')
-# case "$proc_type" in
-# 	GenuineIntel)
-# 		print "Installing Intel microcode"
-# 		pacman -S --noconfirm intel-ucode
-# 		proc_ucode=intel-ucode.img
-# 		;;
-# 	AuthenticAMD)
-# 		print "Installing AMD microcode"
-# 		pacman -S --noconfirm amd-ucode
-# 		proc_ucode=amd-ucode.img
-# 		;;
-# esac	
+proc_type=$(lscpu | awk '/Vendor ID:/ {print $3}')
+case "$proc_type" in
+	GenuineIntel)
+		print "Installing Intel microcode"
+		pacman -S --noconfirm intel-ucode
+		proc_ucode=intel-ucode.img
+		;;
+	AuthenticAMD)
+		print "Installing AMD microcode"
+		pacman -S --noconfirm amd-ucode
+		proc_ucode=amd-ucode.img
+		;;
+esac	
 
 # Graphics Drivers find and install
-# if lspci | grep -E "NVIDIA|GeForce"; then
-#     pacman -S nvidia --noconfirm --needed
-# 	nvidia-xconfig
-# elif lspci | grep -E "Radeon"; then
-#     pacman -S xf86-video-amdgpu --noconfirm --needed
-# elif lspci | grep -E "Integrated Graphics Controller"; then
-#     pacman -S libva-intel-driver libvdpau-va-gl lib32-vulkan-intel vulkan-intel libva-intel-driver libva-utils --needed --noconfirm
-# fi
+if lspci | grep -E "NVIDIA|GeForce"; then
+    pacman -S nvidia --noconfirm --needed
+	nvidia-xconfig
+elif lspci | grep -E "Radeon"; then
+    pacman -S xf86-video-amdgpu --noconfirm --needed
+elif lspci | grep -E "Integrated Graphics Controller"; then
+    pacman -S libva-intel-driver libvdpau-va-gl lib32-vulkan-intel vulkan-intel libva-intel-driver libva-utils --needed --noconfirm
+fi
 
 ############################################################################################################
 ################################   BOOT LOADER   ###########################################################

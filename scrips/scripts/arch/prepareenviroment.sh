@@ -46,7 +46,7 @@ reflector -a 48 -c $iso -f 5 -l 20 --sort rate --save /etc/pacman.d/mirrorlist
 
 # Format the partitions
 mkfs.fat -F32 /dev/sda1
-mkfs.ext4 -L root /dev/sda2
+mkfs.ext4 -L root -F /dev/sda2
 
 mount /dev/sda2 /mnt
 mkdir /mnt/boot
