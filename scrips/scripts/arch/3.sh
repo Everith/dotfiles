@@ -74,6 +74,10 @@ systemctl enable NetworkManager
 # BTRFS
 #sed -i 's/HOOKS=(base udev autodetect modconf block filesystems keyboard fsck)/HOOKS=(base udev autodetect modconf block filesystems keyboard)/' /etc/mkinitcpio.conf 
 #sed -i 's/MODULES=()/MODULES=(btrfs)/' /etc/mkinitcpio.conf 
+echo "###########################"
+echo "### Stage 3 ...       #####"
+echo "###########################"
+
 sleep 10
 mkinitcpio -P           #recreate all kernel modules
 #mkinitcpio -p linux    #recreate linux kernel modules

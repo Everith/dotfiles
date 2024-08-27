@@ -1,6 +1,6 @@
 #!/bin/bash
 
-bash 0.sh
+bash prepareenviroment.sh
 arch-chroot /mnt bash /root/1.sh
 source /mnt/root/user.conf
 arch-chroot /mnt /usr/bin/runuser -u $username -- bash /home/$username/2.sh

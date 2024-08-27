@@ -17,8 +17,8 @@ ln -sf /usr/share/zoneinfo/Europe/Budapest /etc/localtime
 ############################################################################################################
 ############################   KEYBOARD AND FONT  ##########################################################
 ############################################################################################################
-echo "KEYMAP=uk" > /etc/vconsole.conf
-echo "FONT=Hack NF" >> /etc/vconsole.conf
+# echo "KEYMAP=uk" > /etc/vconsole.conf
+# echo "FONT=Hack NF" >> /etc/vconsole.conf
 
 ############################################################################################################
 ####################################   NETWORK   ###########################################################
@@ -33,28 +33,27 @@ echo "$hostname" > /etc/hostname
 ####################################   PACMAN   ############################################################
 ############################################################################################################
 #echo "ILoveCandy" >> /etc/pacman.conf #wrong line 
-pacman -S --noconfirm pacman-contrib curl
-pacman -S --noconfirm reflector archlinux-keyring
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak #CREATE A BACKUP FROM MIRRORLIST JUST IN CASE 
 
 #ENABLE PASSWORDLESS SUDO
 sed -i 's/^# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/g' /etc/sudoers
+echo "erik ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 #ADD PARALEL DOWNLOADING
 sed -i 's/^#Para/Para/g' /etc/pacman.conf
 #Enable multilib
 #sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
-pacman -Sy --noconfirm
+pacman -Suy --noconfirm
 
 ############################################################################################################
 ############################################################################################################
 #GET INFO FROM CPU #TODO
-nc=$(grep -c ^processor /proc/cpuinfo)
-echo "You have " $nc" cores."
-echo "-------------------------------------------------"
-echo "Changing the makeflags for "$nc" cores."
-sudo sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j$nc"/g' /etc/makepkg.conf
-echo "Changing the compression settings for "$nc" cores."
-sudo sed -i 's/COMPRESSXZ=(xz -c -z -)/COMPRESSXZ=(xz -c -T $nc -z -)/g' /etc/makepkg.conf
+# nc=$(grep -c ^processor /proc/cpuinfo)
+# echo "You have " $nc" cores."
+# echo "-------------------------------------------------"
+# echo "Changing the makeflags for "$nc" cores."
+# sudo sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j$nc"/g' /etc/makepkg.conf
+# echo "Changing the compression settings for "$nc" cores."
+# sudo sed -i 's/COMPRESSXZ=(xz -c -z -)/COMPRESSXZ=(xz -c -T $nc -z -)/g' /etc/makepkg.conf
 ############################################################################################################
 
 PKGS=(
@@ -79,25 +78,25 @@ PKGS=(
 'pavucontrol'
 'wireplumber'
 'pamixer'
-###########################
-####   Programing     #####
-###########################
-'git'                                                # the fast distributed version control system
-'jq'
-'clang'
-'npm'
-'python'
-'rustup'
-'go'
-'nodejs'
-###########################
-### Basic Applications ####
-###########################
 'bash'                                               # The GNU Bourne Again shell'bash-completion'                                    # Programmable completion for the bash shell
 'man-db'                                             # Man page
 'wget'                                               # Network utility to retrieve files from the Web
 'curl'                                               # An URL retrieval utility and library
 'unzip'
+###########################
+####   Programing     #####
+###########################
+'git'                                                # the fast distributed version control system
+# 'jq'
+# 'clang'
+# 'npm'
+# 'python'
+# 'rustup'
+# 'go'
+# 'nodejs'
+###########################
+### Basic Applications ####
+###########################
 'zsh'
 'stow'
 'kitty'
@@ -125,14 +124,14 @@ PKGS=(
 ###########################
 ####   Applications   #####
 ###########################
-'powertop'
-'picom'
-'syncthing'
-'swaybar'
-'bitwarden'
-'wofi'
-'discord'
-'playerctl'
+# 'powertop'
+# 'picom'
+# 'syncthing'
+# 'swaybar'
+# 'bitwarden'
+# 'wofi'
+# 'discord'
+# 'playerctl'
 #'polkit-gnome'
 #'gnome-control-center'
 #'file-roller'
@@ -163,29 +162,29 @@ for PKG in "${PKGS[@]}"; do
 done
 
 # determine processor type and install microcode
-proc_type=$(lscpu | awk '/Vendor ID:/ {print $3}')
-case "$proc_type" in
-	GenuineIntel)
-		print "Installing Intel microcode"
-		pacman -S --noconfirm intel-ucode
-		proc_ucode=intel-ucode.img
-		;;
-	AuthenticAMD)
-		print "Installing AMD microcode"
-		pacman -S --noconfirm amd-ucode
-		proc_ucode=amd-ucode.img
-		;;
-esac	
+# proc_type=$(lscpu | awk '/Vendor ID:/ {print $3}')
+# case "$proc_type" in
+# 	GenuineIntel)
+# 		print "Installing Intel microcode"
+# 		pacman -S --noconfirm intel-ucode
+# 		proc_ucode=intel-ucode.img
+# 		;;
+# 	AuthenticAMD)
+# 		print "Installing AMD microcode"
+# 		pacman -S --noconfirm amd-ucode
+# 		proc_ucode=amd-ucode.img
+# 		;;
+# esac	
 
 # Graphics Drivers find and install
-if lspci | grep -E "NVIDIA|GeForce"; then
-    pacman -S nvidia --noconfirm --needed
-	nvidia-xconfig
-elif lspci | grep -E "Radeon"; then
-    pacman -S xf86-video-amdgpu --noconfirm --needed
-elif lspci | grep -E "Integrated Graphics Controller"; then
-    pacman -S libva-intel-driver libvdpau-va-gl lib32-vulkan-intel vulkan-intel libva-intel-driver libva-utils --needed --noconfirm
-fi
+# if lspci | grep -E "NVIDIA|GeForce"; then
+#     pacman -S nvidia --noconfirm --needed
+# 	nvidia-xconfig
+# elif lspci | grep -E "Radeon"; then
+#     pacman -S xf86-video-amdgpu --noconfirm --needed
+# elif lspci | grep -E "Integrated Graphics Controller"; then
+#     pacman -S libva-intel-driver libvdpau-va-gl lib32-vulkan-intel vulkan-intel libva-intel-driver libva-utils --needed --noconfirm
+# fi
 
 ############################################################################################################
 ################################   BOOT LOADER   ###########################################################
@@ -195,10 +194,6 @@ cp /usr/share/limine/BOOTX64.EFI /boot/EFI/BOOT/
 
 UUID=$(blkid /dev/sda2 | grep UUID | cut -d '"' -f 4)
 sed -i "s/XXXXXXXXXXXXXXX/$UUID/" /boot/limine.cfg
-
-############################################################################################################
-########################   UPDATE FSTAB  ###################################################################
-############################################################################################################
 
 ############################################################################################################
 ########################   CREATE USER   ###################################################################
