@@ -33,13 +33,11 @@ reflector -a 48 -c $iso -f 5 -l 20 --sort rate --save /etc/pacman.d/mirrorlist
   echo ;
   echo ;
   echo +1G;
-  echo y;
   echo n;
   echo ;
   echo ;
   echo ;
   echo ;
-  echo y;
   echo t;
   echo 2;
   echo 8e;
