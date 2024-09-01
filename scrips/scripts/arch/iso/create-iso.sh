@@ -20,6 +20,13 @@ echo "USERPASS=$USERPASS" >> /root/iso/profile/releng/airootfs/root/env.conf
 read -p "Please enter ROOTPASS:" ROOTPASS
 echo "ROOTPASS=$ROOTPASS" >> /root/iso/profile/releng/airootfs/root/env.conf
 
+read -p "Please enter SAMBAUSER:" SAMBAUSER
+echo "username=$SAMBAUSER" >> /root/iso/profile/releng/airootfs/root/servercreds
+read -p "Please enter SAMBAPASS:" SAMBAPASS
+echo "password=$SAMBAPASS" >> /root/iso/profile/releng/airootfs/root/servercreds
+read -p "Please enter SAMBADOMAIN:" SAMBADOMAIN
+echo "domain=$SAMBADOMAIN" >> /root/iso/profile/releng/airootfs/root/servercreds
+
 cp -r /home/erik.ssh /root/iso/profile/releng/airootfs/root/
 
 

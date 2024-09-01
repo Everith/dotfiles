@@ -31,6 +31,13 @@ done
 export PATH=$PATH:~/.local/bin
 
 sudo rm -r ~/yay
+sudo cp -r /root/.ssh /home/erik/.ssh
+
+git clone --recursive git@github.com:Everith/dotfiles.git
+cd dotfiles
+git switch dev
+stow git hyper kitty scripts nvim zsh
+cd
 
 gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3
 gsettings set org.gnome.desktop.interface icon-theme Papirus

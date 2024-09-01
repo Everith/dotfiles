@@ -39,11 +39,11 @@
 #network location example:
 # //192.168.1.100/Downloads  /Server cifs    credentials=/root/servercreds,uid=1000,iocharset=utf8,vers=2.0  0   0
 # Behemoth servers
-# echo "//behemoth.local/server 	/Server/server     cifs            credentials=/root/servercreds,uid=1000,iocharset=utf8,vers=2.0,rw	0 0" >> /etc/fstab
-# echo "//behemoth.local/dev    	/Server/dev        cifs            credentials=/root/servercreds,uid=1000,iocharset=utf8,vers=2.0,rw	0 0" >> /etc/fstab
-# echo "//behemoth.local/media  	/Server/media      cifs            credentials=/root/servercreds,uid=1000,iocharset=utf8,vers=2.0,rw	0 0" >> /etc/fstab
-# echo "//behemoth.local/novels 	/Server/novels     cifs            credentials=/root/servercreds,uid=1000,iocharset=utf8,vers=2.0,rw	0 0" >> /etc/fstab
-# echo "//behemoth.local/games  	/Server/games      cifs            credentials=/root/servercreds,uid=1000,iocharset=utf8,vers=2.0,rw	0 0" >> /etc/fstab
+# echo "//behemoth.local/server 	/Server/server     cifs            credentials=/root/servercreds,uid=1000,iocharset=utf8,file_mode=0777,dir_mode=0777,vers=2.0,rw	0 0" >> /etc/fstab
+# echo "//behemoth.local/dev    	/Server/dev        cifs            credentials=/root/servercreds,uid=1000,iocharset=utf8,file_mode=0777,dir_mode=0777,vers=2.0,rw	0 0" >> /etc/fstab
+# echo "//behemoth.local/media  	/Server/media      cifs            credentials=/root/servercreds,uid=1000,iocharset=utf8,file_mode=0777,dir_mode=0777,vers=2.0,rw	0 0" >> /etc/fstab
+# echo "//behemoth.local/novels 	/Server/novels     cifs            credentials=/root/servercreds,uid=1000,iocharset=utf8,file_mode=0777,dir_mode=0777,vers=2.0,rw	0 0" >> /etc/fstab
+# echo "//behemoth.local/games  	/Server/games      cifs            credentials=/root/servercreds,uid=1000,iocharset=utf8,file_mode=0777,dir_mode=0777,vers=2.0,rw	0 0" >> /etc/fstab
 
 
 ############################################################################################################

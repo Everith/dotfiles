@@ -10,8 +10,4 @@ arch-chroot /mnt bash /root/rootfinish.sh
 echo "#############################"
 echo "# Installation is completed #"
 echo "#############################"
-#reboot
-
-cat /mnt/etc/fstab
-echo "###"
-cat /mnt/boot/limine.cfg
+# reboot
