@@ -204,19 +204,19 @@ passwd
 
 if ! source /root/user.conf; then
 	read -p "Please enter username:" username
-    echo "username=$username" >> /root/user.conf
+    echo "username=$USER" >> /root/user.conf
 fi
 if [ $(whoami) = "root"  ];
 then
-    useradd -m -G wheel -s /bin/bash $username 
-	echo "Change $username password:"
-	passwd $username
+    useradd -m -G wheel -s /bin/bash $USER 
+	echo "Change $USER password:"
+	echo -e "$USERPASS\n$USERPASS" | (passwd $USER)
 else
 	echo "You are already a user proceed with aur installs"
 fi
 
-cp /root/2.sh /home/$username/
-chown -R $username:$username /home/$username
+cp /root/2.sh /home/$USER/
+chown -R $USER:$USER /home/$USER
 
 echo "###########################"
 echo "### Stage 1 completed #####"

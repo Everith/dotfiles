@@ -1,9 +1,10 @@
 #!/bin/bash
 
+source env.conf
+
 bash prepareenviroment.sh
 arch-chroot /mnt bash /root/rootsettings.sh
-source /mnt/root/user.conf
-arch-chroot /mnt /usr/bin/runuser -u $username -- bash /home/$username/usersettings.sh
+arch-chroot /mnt /usr/bin/runuser -u $USER -- bash /home/$USER/usersettings.sh
 arch-chroot /mnt bash /root/rootfinish.sh
 
 echo "#############################"
