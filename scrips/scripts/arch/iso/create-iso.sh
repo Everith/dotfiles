@@ -3,7 +3,7 @@ pacman -S archiso
 mkdir -p ~/iso/profile
 cp -r /usr/share/archiso/configs/releng/ ~/iso/profile
 cp packages.x86_64 /root/iso/profile/releng/packages.x86_64
-cp start.sh /root/iso/profile/releng/starth.sh
+cp start.sh /root/iso/profile/releng/airootfs/root/starth.sh
 
 read -p "Please enter SSID:" SSID
 echo "SSID=$SSID" >> /root/iso/profile/releng/airootfs/root/env.conf
