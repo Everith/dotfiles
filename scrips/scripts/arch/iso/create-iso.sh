@@ -1,9 +1,9 @@
 #!/bin/env bash
-
-mkdir -p iso/profile
-cp -r /usr/share/archiso/configs/releng/ iso/profile
+pacman -S archiso
+mkdir -p ~/iso/profile
+cp -r /usr/share/archiso/configs/releng/ ~/iso/profile
 cp packages.x86_64 /root/iso/profile/releng/packages.x86_64
-
+cp start.sh /root/iso/profile/releng/starth.sh
 
 read -p "Please enter SSID:" SSID
 echo "SSID=$SSID" >> /root/iso/profile/releng/airootfs/root/env.conf
@@ -27,7 +27,7 @@ echo "password=$SAMBAPASS" >> /root/iso/profile/releng/airootfs/root/servercreds
 read -p "Please enter SAMBADOMAIN:" SAMBADOMAIN
 echo "domain=$SAMBADOMAIN" >> /root/iso/profile/releng/airootfs/root/servercreds
 
-cp -r /home/erik.ssh /root/iso/profile/releng/airootfs/root/
+cp -r /home/erik/.ssh /root/iso/profile/releng/airootfs/root/
 
 
 rm -r /root/iso/build/

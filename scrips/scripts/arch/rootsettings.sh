@@ -83,6 +83,7 @@ PKGS=(
 'wget'                                               # Network utility to retrieve files from the Web
 'curl'                                               # An URL retrieval utility and library
 'unzip'
+'fuse-exfat'
 ###########################
 ####   Programing     #####
 ###########################
