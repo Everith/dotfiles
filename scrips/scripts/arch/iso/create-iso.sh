@@ -34,4 +34,4 @@ cp -r /home/erik/.ssh /root/iso/profile/releng/airootfs/root/
 rm -r /root/iso/build/
 #TODO: rename iso to evdev.iso
 # rm /home/erik/archlinux-2024.09.01-x86_64.iso
-mkarchiso -v -w /root/iso/build/ -o /home/erik/ /root/iso/profile/releng/
+mkarchiso -v -w /root/iso/build/ -o /home/erik/Evdev.iso /root/iso/profile/releng/
