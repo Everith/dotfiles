@@ -202,11 +202,12 @@ sed -i "s/XXXXXXXXXXXXXXX/$UUID/" /boot/limine.cfg
 echo "CREATING USER"
 echo "Change root password:"
 passwd
+#echo -e "$ROOTPASS\n$ROOTPASS" | (passwd)
 
-if ! source /root/user.conf; then
-	read -p "Please enter username:" username
-    echo "username=$USER" >> /root/user.conf
-fi
+# if ! source /root/user.conf; then
+# 	read -p "Please enter username:" username
+#     echo "username=$USER" >> /root/user.conf
+# fi
 if [ $(whoami) = "root"  ];
 then
     useradd -m -G wheel -s /bin/bash $USER 
@@ -216,7 +217,7 @@ else
 	echo "You are already a user proceed with aur installs"
 fi
 
-cp /root/2.sh /home/$USER/
+cp /root/usersettings.sh /home/$USER/
 chown -R $USER:$USER /home/$USER
 
 echo "###########################"
