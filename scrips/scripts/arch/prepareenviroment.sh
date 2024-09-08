@@ -85,11 +85,6 @@ mount /dev/sda1 /mnt/boot
 pacstrap /mnt base base-devel linux linux-firmware neovim pacman-contrib curl reflector archlinux-keyring --noconfirm
 genfstab -U /mnt >> /mnt/etc/fstab
 
-cp ./usersettings.sh /mnt/home/$USER/usersettings.sh
-cp ./rootfinish.sh /mnt/root/
-cp ./rootsettings.sh /mnt/root/
-cp ./limine-config/* /mnt/boot/
-cp /etc/pacman.d/mirrorlist /mnt/etc/pacman.d/mirrorlist
 
 echo "###########################"
 echo "### Stage 0 completed #####"
