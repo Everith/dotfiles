@@ -31,12 +31,14 @@ done
 export PATH=$PATH:~/.local/bin
 
 sudo rm -r ~/yay
-sudo cp -r /root/.ssh /home/erik/.ssh
+sudo chmod 700 .ssh
+sudo chmod 600 .ssh/*
 
 git clone --recursive git@github.com:Everith/dotfiles.git
 cd dotfiles
 git switch dev
-stow git hyper kitty scripts nvim zsh
+sudo rm -r ~/.config/hypr
+stow git hyprland kitty scrips nvim zsh
 cd
 
 gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3
