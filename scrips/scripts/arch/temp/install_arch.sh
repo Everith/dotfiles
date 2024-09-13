@@ -19,7 +19,8 @@ makepkg -si PKGBUILD
 cd ~/temp/
 rm -r yay
 
-yay -S gradience-git adw-gtk3-git eww-tray-wayland-git swww grimblast-git python-material-color-utilities hyprpicker-git
+yay -S gradience-git adw-gtk3-git eww-tray-wayland-git 
+swww grimblast-git python-material-color-utilities hyprpicker-git
 
 # Fonts and icons
 yay -S ttf-jetbrains-mono ttf-nerd-fonts-symbols papirus-icon-theme
