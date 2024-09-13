@@ -3,7 +3,7 @@
 # Automatically remove a torrent and delete its data after a specified period of
 # time (in seconds).
 
-TARGET="/srv/data/media/torrent/sonarr"
+TARGET="/srv/data/media/torrent/radarr"
 USER=erik
 PASS=erik
 BIN="/usr/bin/transmission-remote"
