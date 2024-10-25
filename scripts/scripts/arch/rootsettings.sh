@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ############################################################################################################
-########################   ARCH OS ROOT USER  ##############################################################
+########################   ARCH OS ROOT EVEUSER  ##############################################################
 ############################################################################################################
 
 hostname=evdev
@@ -197,31 +197,29 @@ UUID=$(blkid /dev/sda2 | grep UUID | cut -d '"' -f 4)
 sed -i "s/XXXXXXXXXXXXXXX/$UUID/" /boot/limine.cfg
 
 ############################################################################################################
-########################   CREATE USER   ###################################################################
+########################   CREATE EVEUSER   ###################################################################
 ############################################################################################################
-echo "CREATING USER"
+echo "CREATING EVEUSER"
 echo "Change root password:"
-passwd
+echo -e "$ROOTPASS\n$ROOTPASS" | (passwd)
 #echo -e "$ROOTPASS\n$ROOTPASS" | (passwd)
 
 # if ! source /root/user.conf; then
 # 	read -p "Please enter username:" username
-#     echo "username=$USER" >> /root/user.conf
+#     echo "username=$EVEUSER" >> /root/user.conf
 # fi
 if [ $(whoami) = "root"  ];
 then
-    useradd -m -G wheel -s /bin/bash $USER 
-	echo "Change $USER password:"
-	echo -e "$USERPASS\n$USERPASS" | (passwd $USER)
+    useradd -m -G wheel -s /bin/bash $EVEUSER
+	echo "Change $EVEUSER password:"
+	echo -e "$EVEUSERPASS\n$EVEUSERPASS" | (passwd $EVEUSER)
 else
 	echo "You are already a user proceed with aur installs"
 fi
 
-cp /root/usersettings.sh /home/$USER/
-chown -R $USER:$USER /home/$USER
+cp /root/usersettings.sh /home/$EVEUSER/
+chown -R $EVEUSER:$EVEUSER /home/$EVEUSER
 
 echo "###########################"
 echo "### Stage 1 completed #####"
 echo "###########################"
-users
-sleep 10

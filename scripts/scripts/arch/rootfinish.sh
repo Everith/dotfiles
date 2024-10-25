@@ -81,7 +81,7 @@ echo "###########################"
 mkinitcpio -P           #recreate all kernel modules
 #mkinitcpio -p linux    #recreate linux kernel modules
 
-chown -R $USER:$USER /home/$USER
+chown -R $EVEUSER:$EVEUSER /home/$EVEUSER
 echo "###########################"
 echo "### Stage 3 completed #####"
 echo "###########################"
