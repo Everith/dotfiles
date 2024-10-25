@@ -9,7 +9,7 @@ timedatectl set-ntp true
 loadkeys uk
 setfont ter-132b
 
-pacman -Suy --noconfirm
+pacman -Sy
 pacman -S --noconfirm pacman-contrib
 
 #REFLECTOR MIRROR LIST UPDATE 

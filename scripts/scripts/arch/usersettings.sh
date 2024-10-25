@@ -38,7 +38,7 @@ git clone --recursive git@github.com:Everith/dotfiles.git
 cd dotfiles
 git switch dev
 sudo rm -r ~/.config/hypr
-stow git hyprland kitty scrips nvim zsh
+stow git hyprland kitty scripts nvim zsh
 cd
 
 gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3

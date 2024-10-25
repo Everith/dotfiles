@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source env.conf
+source /root/env.conf
 
 bash prepareenviroment.sh
 cp ./limine-config/* /mnt/boot/

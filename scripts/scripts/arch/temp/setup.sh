@@ -4,7 +4,7 @@ echo "Linking .config files ..."
 ln -sr ../nvim ~/.config/
 ln -sr ../zsh ~/.config/
 ln -sr ../gti ~/.config/
-ln -sr ../scrips ~/.config/
+ln -sr ../scripts ~/.config/
 echo "Linking .config DONE "
 
 echo "Creating .zshenv file ..."

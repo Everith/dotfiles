@@ -14,5 +14,5 @@ pacman -Su
 git clone https://github.com/Everith/dotfiles.git
 sleep 10
 
-cd dotfiles/scrips/scripts/arch
+cd dotfiles/scripts/scripts/arch
 bash install.sh
