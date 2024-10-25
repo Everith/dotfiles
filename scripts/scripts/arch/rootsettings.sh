@@ -217,7 +217,6 @@ else
 	echo "You are already a user proceed with aur installs"
 fi
 
-cp /root/usersettings.sh /home/$EVEUSER/
 cp /root/.ssh /home/$EVEUSER/
 chown -R $EVEUSER:$EVEUSER /home/$EVEUSER
 
