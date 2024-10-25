@@ -223,3 +223,5 @@ chown -R $USER:$USER /home/$USER
 echo "###########################"
 echo "### Stage 1 completed #####"
 echo "###########################"
+users
+sleep 10

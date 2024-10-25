@@ -52,35 +52,6 @@ mount /dev/sda2 /mnt
 mkdir /mnt/boot
 mount /dev/sda1 /mnt/boot
 
-# Prompt the user for input
-# read -p "Automated (a) or manual (b)? " choice
-# case "$choice" in
-#     a|A)
-#       ;;
-
-#     b|B)
-#       # lsblk
-#       # echo "Enter the drive: (eg.: /dev/sda )"
-#       # read DRIVE
-#       # # Format the partitions
-#       # mkfs.fat -F32 ${DRIVE}1
-#       # mkfs.ext4 -L root ${DRIVE}2
-
-#       # # Format the partitions
-#       # mkfs.fat -F32 ${DRIVE}1
-#       # mkfs.ext4 -L root ${DRIVE}2
-
-#       # mount ${DRIVE}2 /mnt
-#       # mkdir /mnt/boot
-#       # mount ${DRIVE}1 /mnt/boot
-#       ;;
-
-#     *)
-#         echo "Invalid choice. Please choose a, b, c, or d."
-#         ;;
-# esac
-
-
 # base linux linux-firmeware needed for arch install bare-bone 
 pacstrap /mnt base base-devel linux linux-firmware neovim pacman-contrib curl reflector archlinux-keyring --noconfirm
 genfstab -U /mnt >> /mnt/etc/fstab
