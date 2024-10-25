@@ -201,7 +201,7 @@ sed -i "s/XXXXXXXXXXXXXXX/$UUID/" /boot/limine.cfg
 ############################################################################################################
 echo "CREATING EVEUSER"
 echo "Change root password:"
-echo -e "$ROOTPASS\n$ROOTPASS" | (passwd)
+echo "root:$ROOTPASS" | sudo chpasswd
 #echo -e "$ROOTPASS\n$ROOTPASS" | (passwd)
 
 # if ! source /root/user.conf; then
@@ -210,14 +210,14 @@ echo -e "$ROOTPASS\n$ROOTPASS" | (passwd)
 # fi
 if [ $(whoami) = "root"  ];
 then
-    useradd -m -G wheel -s /bin/bash $EVEUSER
+    useradd -m -G wheel -s /bin/zsh $EVEUSER
 	echo "Change $EVEUSER password:"
-	echo -e "$EVEUSERPASS\n$EVEUSERPASS" | (passwd $EVEUSER)
+	echo "$EVEUSER:$EVEUSERPASS" | chpasswd
 else
 	echo "You are already a user proceed with aur installs"
 fi
 
-cp /root/.ssh /home/$EVEUSER/
+cp -r /root/.ssh /home/$EVEUSER/
 chown -R $EVEUSER:$EVEUSER /home/$EVEUSER
 
 echo "###########################"
