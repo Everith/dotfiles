@@ -2,22 +2,23 @@
 export HISTFILE=~/.config/zsh/history
 export HISTSIZE=10000
 export SAVEHIST=10000
-export PATH="$HOME/.local/bin":$PATH
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999
 setopt append_history
 setopt extended_history
 setopt inc_append_history
-export PATH=$HOME/.cargo/bin:$PATH
+
+export VISUAL="/bin/nvim"
+export EDITOR="/bin/nvim"
+
+export PATH="$HOME/.local/bin":$PATH
 export PATH=$HOME/.local/share/go/bin:$PATH
 export GOPATH=$HOME/.local/share/go
 export GOBIN=$HOME/.local/share/go/bin
-# export PATH=$HOME/.fnm:$PATH
-# export PATH="$PATH:./node_modules/.bin"
-# eval "$(fnm env)"
-# eval "$(zoxide init zsh)"
-# eval "`pip completion --zsh`"
+export PATH=$HOME/.cargo/bin:$PATH
+export RUSTPATH=$HOME/.cargo/env
 
+export EXA_COLORS='di=1;36:da=1;36'
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -33,3 +34,4 @@ export GOBIN=$HOME/.local/share/go/bin
 # fi
 # unset __conda_setup
 # <<< conda initialize <<<#!/bin/sh
+#
