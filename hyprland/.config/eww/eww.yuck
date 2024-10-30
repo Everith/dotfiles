@@ -2,7 +2,7 @@
 (include "windows.yuck")
 
 
-(include "modules/bar.yuck")
+(include "modules/system.yuck")
 (include "modules/notifications_popup.yuck")
 (include "modules/launcher.yuck")
 (include "modules/control_center.yuck")

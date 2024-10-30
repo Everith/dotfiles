@@ -1,24 +1,26 @@
 (defwindow bar
-    :monitor 0
-    :geometry (geometry :width "100%"
-                        :anchor "bottom center")
-    :exclusive true
-    :namespace "eww"
-    (bar)
+  :monitor 1
+  :geometry (geometry 
+    :anchor "top right"
+  )
+  :exclusive true
+  :namespace "eww"
+  (system)
 )
 
 (defwindow control_center
-    :monitor 0
-    :stacking "overlay"
-    :geometry (geometry
-                    :anchor "bottom right"
-                )
-    :namespace "eww"
-    (control_center)
+  :monitor 1
+  :stacking "overlay"
+  :geometry (geometry
+    :x "0%"
+    :anchor "bottom right"
+  )
+  :namespace "eww"
+  (control_center)
 )
 
 (defwindow launcher
-    :monitor 0
+    :monitor 1
     :stacking "overlay"
     :geometry (geometry
                     :anchor "left bottom"
@@ -29,17 +31,17 @@
 )
 
 (defwindow notifications_popup
-    :monitor 0
-    :stacking "overlay"
-    :geometry (geometry
-                    :anchor "top center"
-                )
-    :namespace "eww"
-    (notifications_popup_widget)
+  :monitor 1
+  :stacking "overlay"
+  :geometry (geometry
+    :anchor "top center"
+  )
+  :namespace "eww"
+  (notifications_popup_widget)
 )
 
 (defwindow osd
-    :monitor 0
+    :monitor 1
     :stacking "overlay"
     :geometry (geometry 
                     :anchor "bottom center")
@@ -48,7 +50,7 @@
 )
 
 (defwindow powermenu
-    :monitor 0
+    :monitor 1
     :stacking "overlay"
     :geometry (geometry 
                     :anchor "center"
@@ -59,7 +61,7 @@
 )
 
 (defwindow recorder_menu
-    :monitor 0
+    :monitor 1
     :stacking "overlay"
     :geometry (geometry 
                     :anchor "center"
@@ -70,17 +72,18 @@
 )
 
 (defwindow tray
-    :monitor 0
+    :monitor 1
     :stacking "fg"
     :geometry (geometry 
-                    :anchor "bottom left"
-                    :x "82%")
+      :anchor "bottom left"
+      :x "0%"
+    )
     :namespace "eww"
     (tray)
 )
 
 (defwindow bg_widgets
-    :monitor 0
+    :monitor 1
     :stacking "bg"
     :geometry (geometry 
                     :anchor "center"

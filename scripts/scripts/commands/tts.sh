@@ -1,6 +1,7 @@
 #!/bin/bash
 
-ffmpeg -y -f alsa -i default -acodec pcm-s16le -ac 1 -ar 44100 -t 4 -f wav ~/.cache/stt.wav >/dev/null 2>&1
-vosk-transcrier -m ~/model/path -i ~/.cache/stt.wav -o ~/.cache/stt.txt >/dev/null 2>&1
-cat ~/.cache/stt.txt
+input=$(cat -)
 
+#echo "$input" | piper --model ~/Downloads/en_US-amy-medium.onnx --output-raw | aplay -r 22050 -f S16_LE -t raw -
+#echo "$input" | piper --model ~/Downloads/en_US-libritts_r-medium.onnx --output-raw | aplay -r 22050 -f S16_LE -t raw -
+echo "$input" | piper --model ~/Downloads/hu_HU-anna-medium.onnx --output-raw | aplay -r 22050 -f S16_LE -t raw -
