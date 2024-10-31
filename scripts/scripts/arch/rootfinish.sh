@@ -39,11 +39,16 @@
 #network location example:
 # //192.168.1.100/Downloads  /Server cifs    credentials=/root/servercreds,uid=1000,iocharset=utf8,vers=2.0  0   0
 # Behemoth servers
-# echo "//behemoth.local/server 	/Server/server     cifs            credentials=/root/servercreds,uid=1000,iocharset=utf8,file_mode=0777,dir_mode=0777,vers=2.0,rw	0 0" >> /etc/fstab
-# echo "//behemoth.local/dev    	/Server/dev        cifs            credentials=/root/servercreds,uid=1000,iocharset=utf8,file_mode=0777,dir_mode=0777,vers=2.0,rw	0 0" >> /etc/fstab
-# echo "//behemoth.local/media  	/Server/media      cifs            credentials=/root/servercreds,uid=1000,iocharset=utf8,file_mode=0777,dir_mode=0777,vers=2.0,rw	0 0" >> /etc/fstab
-# echo "//behemoth.local/novels 	/Server/novels     cifs            credentials=/root/servercreds,uid=1000,iocharset=utf8,file_mode=0777,dir_mode=0777,vers=2.0,rw	0 0" >> /etc/fstab
-# echo "//behemoth.local/games  	/Server/games      cifs            credentials=/root/servercreds,uid=1000,iocharset=utf8,file_mode=0777,dir_mode=0777,vers=2.0,rw	0 0" >> /etc/fstab
+mkdir -p /server/dev
+mkdir -p /server/server
+mkdir -p /server/media
+mkdir -p /server/novels
+mkdir -p /server/games
+echo "//behemoth.local/dev    	/server/dev        cifs            credentials=/root/servercreds,uid=1000,iocharset=utf8,file_mode=0777,dir_mode=0777,vers=2.0,rw	0 0" >> /etc/fstab
+echo "//behemoth.local/server 	/server/server     cifs            credentials=/root/servercreds,uid=1000,iocharset=utf8,file_mode=0777,dir_mode=0777,vers=2.0,rw	0 0" >> /etc/fstab
+echo "//behemoth.local/media  	/server/media      cifs            credentials=/root/servercreds,uid=1000,iocharset=utf8,file_mode=0777,dir_mode=0777,vers=2.0,rw	0 0" >> /etc/fstab
+echo "//behemoth.local/novels 	/server/novels     cifs            credentials=/root/servercreds,uid=1000,iocharset=utf8,file_mode=0777,dir_mode=0777,vers=2.0,rw	0 0" >> /etc/fstab
+echo "//behemoth.local/games  	/server/games      cifs            credentials=/root/servercreds,uid=1000,iocharset=utf8,file_mode=0777,dir_mode=0777,vers=2.0,rw	0 0" >> /etc/fstab
 
 
 ############################################################################################################
@@ -52,7 +57,7 @@
 systemctl enable NetworkManager
 #systemctl enable bluetooth
 #systemctl enable cups.service
-#systemctl enable sshd
+systemctl enable sshd
 #systemctl enable avahi-daemon
 #systemctl enable tlp # You can comment this command out if you didn't install tlp, see above
 #systemctl enable reflector.timer
