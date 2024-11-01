@@ -14,6 +14,7 @@ source /root/env.conf
 bash prepareenviroment.sh
 cp ./limine-config/* /mnt/boot/
 cp /etc/pacman.d/mirrorlist /mnt/etc/pacman.d/mirrorlist
+cp /root/env.conf /mnt/root/env.conf
 cp /root/servercreds /mnt/root
 
 cp -r /root/.ssh /mnt/root/
@@ -22,6 +23,7 @@ arch-chroot /mnt bash /root/rootsettings.sh
 
 cp -r .ssh /mnt/home/$EVEUSER/
 cp ./usersettings.sh /mnt/home/$EVEUSER/usersettings.sh
+cp /root/env.conf /mnt/home/$EVEUSER/env.conf
 arch-chroot /mnt /usr/bin/runuser -u $EVEUSER -- bash /home/$EVEUSER/usersettings.sh
 
 cp ./rootfinish.sh /mnt/root/

@@ -3,7 +3,7 @@
 ############################################################################################################
 ########################   ARCH OS ROOT EVEUSER  ##############################################################
 ############################################################################################################
-
+source /root/env.conf
 hostname=evdev
 ############################################################################################################
 ############################   LANGUAGE AND LOCAL  #########################################################
@@ -37,7 +37,7 @@ cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak #CREATE A BACKUP FROM M
 
 #ENABLE PASSWORDLESS SUDO
 sed -i 's/^# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/g' /etc/sudoers
-echo "erik ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+echo "$EVEUSER ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 #ADD PARALEL DOWNLOADING
 sed -i 's/^#Para/Para/g' /etc/pacman.conf
 #Enable multilib

@@ -48,5 +48,4 @@ gsettings set org.gnome.desktop.interface font-name "JetBrains Mono Regular 11"
 echo "###########################"
 echo "### Stage 2 completed #####"
 echo "###########################"
-
 exit
