@@ -1,37 +1,38 @@
 #!/bin/env bash
-pacman -S archiso
-mkdir -p ~/iso/profile
-cp -r /usr/share/archiso/configs/releng/ ~/iso/profile
-cp packages.x86_64 /root/iso/profile/releng/packages.x86_64
-cp start.sh /root/iso/profile/releng/airootfs/root/starth.sh
-rm /root/iso/profile/releng/airootfs/root/env.conf
+pacman -S archiso --noconfirm
+rm -r /root/iso
+mkdir -p /root/iso
+cp -r /usr/share/archiso/configs/releng/ /root/iso
+cp start.sh /root/iso/releng/airootfs/root/start.sh
+echo "git" >> /root/iso/releng/packages.x86_64
+echo "neovim" >> /root/iso/releng/packages.x86_64
+echo "networkmanager" >> /root/iso/releng/packages.x86_64
 
 read -p "Please enter SSID:" SSID
-echo "SSID=$SSID" >> /root/iso/profile/releng/airootfs/root/env.conf
+echo "SSID=$SSID" >> /root/iso/releng/airootfs/root/env.conf
 
 read -p "Please enter WIFIPASS:" WIFIPASS
-echo "WIFIPASS=$WIFIPASS" >> /root/iso/profile/releng/airootfs/root/env.conf
+echo "WIFIPASS=$WIFIPASS" >> /root/iso/releng/airootfs/root/env.conf
 
 read -p "Please enter USER:" USER
-echo "USER=$USER" >> /root/iso/profile/releng/airootfs/root/env.conf
+echo "USER=$EVEUSER" >> /root/iso/releng/airootfs/root/env.conf
 
 read -p "Please enter USERPASS:" USERPASS
-echo "USERPASS=$USERPASS" >> /root/iso/profile/releng/airootfs/root/env.conf
+echo "USERPASS=$EVEUSERPASS" >> /root/iso/releng/airootfs/root/env.conf
 
 read -p "Please enter ROOTPASS:" ROOTPASS
-echo "ROOTPASS=$ROOTPASS" >> /root/iso/profile/releng/airootfs/root/env.conf
+echo "ROOTPASS=$ROOTPASS" >> /root/iso/releng/airootfs/root/env.conf
 
 read -p "Please enter SAMBAUSER:" SAMBAUSER
-echo "username=$SAMBAUSER" >> /root/iso/profile/releng/airootfs/root/servercreds
+echo "username=$SAMBAUSER" >> /root/iso/releng/airootfs/root/servercreds
 read -p "Please enter SAMBAPASS:" SAMBAPASS
-echo "password=$SAMBAPASS" >> /root/iso/profile/releng/airootfs/root/servercreds
+echo "password=$SAMBAPASS" >> /root/iso/releng/airootfs/root/servercreds
 #read -p "Please enter SAMBADOMAIN:" SAMBADOMAIN
-echo "domain=WORKGROUP" >> /root/iso/profile/releng/airootfs/root/servercreds
+echo "domain=WORKGROUP" >> /root/iso/releng/airootfs/root/servercreds
 
-cp -r /home/erik/.ssh /root/iso/profile/releng/airootfs/root/
+cp -r ~/.ssh /root/iso/releng/airootfs/root/
 
-
-rm -r /root/iso/build/
+rm -r /tmp/*
 #TODO: rename iso to evdev.iso
 # rm /home/erik/archlinux-2024.09.01-x86_64.iso
-mkarchiso -v -w /root/iso/build/ -o /home/erik/Evdev.iso /root/iso/profile/releng/
+mkarchiso -v -w /tmp -o /server/dev/ /root/iso/releng/
