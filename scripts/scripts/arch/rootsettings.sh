@@ -84,17 +84,19 @@ PKGS=(
 'curl'                                               # An URL retrieval utility and library
 'unzip'
 'fuse-exfat'
+'bluez'
+'bluez-tools'
 ###########################
 ####   Programing     #####
 ###########################
 'git'                                                # the fast distributed version control system
-# 'jq'
-# 'clang'
-# 'npm'
-# 'python'
-# 'rustup'
-# 'go'
-# 'nodejs'
+'jq'
+'clang'
+'npm'
+'python'
+'rustup'
+'go'
+'nodejs'
 ###########################
 ### Basic Applications ####
 ###########################
@@ -128,11 +130,11 @@ PKGS=(
 # 'powertop'
 # 'picom'
 # 'syncthing'
-# 'swaybar'
+'swaybar'
 # 'bitwarden'
-# 'wofi'
+'wofi'
 # 'discord'
-# 'playerctl'
+'playerctl'
 #'polkit-gnome'
 #'gnome-control-center'
 #'file-roller'
@@ -142,8 +144,6 @@ PKGS=(
 #'python-gobject'
 #'python-requests'
 #'python-jinja'
-#'zenity'
-#'socat'
 #'zenity'
 #'socat'
 #'xdg-desktop-portal-hyprland'
