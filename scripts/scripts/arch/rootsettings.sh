@@ -204,7 +204,7 @@ echo "CREATING EVEUSER"
 echo "Change root password:"
 echo "root:$ROOTPASS" | sudo chpasswd
 
-if ! source /root/user.conf; then
+if ! source /root/env.conf; then
 	read -p "Please enter username:" EVEUSER
     echo "username=$EVEUSER"
 fi
