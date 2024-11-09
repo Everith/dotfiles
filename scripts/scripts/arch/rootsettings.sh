@@ -86,6 +86,7 @@ PKGS=(
 'fuse-exfat'
 'bluez'
 'bluez-tools'
+'plymouth'						# Boot splash screen
 ###########################
 ####   Programing     #####
 ###########################
@@ -202,21 +203,25 @@ sed -i "s/XXXXXXXXXXXXXXX/$UUID/" /boot/limine.cfg
 echo "CREATING EVEUSER"
 echo "Change root password:"
 echo "root:$ROOTPASS" | sudo chpasswd
-#echo -e "$ROOTPASS\n$ROOTPASS" | (passwd)
 
-# if ! source /root/user.conf; then
-# 	read -p "Please enter username:" username
-#     echo "username=$EVEUSER" >> /root/user.conf
-# fi
+if ! source /root/user.conf; then
+	read -p "Please enter username:" EVEUSER
+    echo "username=$EVEUSER"
+fi
+
 if [ $(whoami) = "root"  ];
 then
     useradd -m -G wheel -s /bin/zsh $EVEUSER
 	echo "Change $EVEUSER password:"
 	echo "$EVEUSER:$EVEUSERPASS" | chpasswd
 else
-	echo "You are already a user proceed with aur installs"
+	echo "Something went wrong!"
+	read -n 1
 fi
 
+echo "ls /home"
+ls /home
+read -n 1
 cp -r /root/.ssh /home/$EVEUSER/
 chown -R $EVEUSER:$EVEUSER /home/$EVEUSER
 

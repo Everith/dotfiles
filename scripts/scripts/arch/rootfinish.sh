@@ -55,7 +55,7 @@ echo "//behemoth.local/games  	/server/games      cifs            credentials=/r
 ############################   ENABLE SERVICES   ###########################################################
 ############################################################################################################
 systemctl enable NetworkManager
-#systemctl enable bluetooth
+systemctl enable bluetooth
 #systemctl enable cups.service
 systemctl enable sshd
 #systemctl enable avahi-daemon

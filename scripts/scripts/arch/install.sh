@@ -34,4 +34,4 @@ echo "# Installation is completed remove USB media #"
 echo "##############################################"
 echo "Press any key to continue..."
 read -n 1
-# reboot
+reboot
