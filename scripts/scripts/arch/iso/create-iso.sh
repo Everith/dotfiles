@@ -14,11 +14,11 @@ echo "SSID=$SSID" >> /root/iso/releng/airootfs/root/env.conf
 read -p "Please enter WIFIPASS:" WIFIPASS
 echo "WIFIPASS=$WIFIPASS" >> /root/iso/releng/airootfs/root/env.conf
 
-read -p "Please enter USER:" USER
-echo "USER=$EVEUSER" >> /root/iso/releng/airootfs/root/env.conf
+read -p "Please enter USER:" EVEUSER
+echo "EVEUSER=$EVEUSER" >> /root/iso/releng/airootfs/root/env.conf
 
-read -p "Please enter USERPASS:" USERPASS
-echo "USERPASS=$EVEUSERPASS" >> /root/iso/releng/airootfs/root/env.conf
+read -p "Please enter USERPASS:" EVEUSERPASS
+echo "EVEUSERPASS=$EVEUSERPASS" >> /root/iso/releng/airootfs/root/env.conf
 
 read -p "Please enter ROOTPASS:" ROOTPASS
 echo "ROOTPASS=$ROOTPASS" >> /root/iso/releng/airootfs/root/env.conf
