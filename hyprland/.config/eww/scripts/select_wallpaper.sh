@@ -1,6 +1,6 @@
 #!/bin/bash
 
-file=$(zenity --file-selection --filename $HOME/Pictures/)
+file=$(zenity --file-selection --filename /server/dev)
 
 if [[ $file == "" ]]; then
     exit 0

@@ -1,0 +1,781 @@
+INFO: 2024-11-10 18:20:32,056: main() 'Using profile folder /home/erik/.config/variety/'
+INFO: 2024-11-10 18:20:32,057: perform_upgrade() 'Last run version was 0.8.12 or earlier, current version is 0.8.12'
+ERROR: 2024-11-10 18:20:32,058: perform_upgrade() 'Error during version upgrade. Continuing.'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/variety/VarietyWindow.py", line 2283, in perform_upgrade
+    if Util.compare_versions(last_version, "0.4.13") < 0:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/variety/Util.py", line 768, in compare_versions
+    from pkg_resources import parse_version
+ModuleNotFoundError: No module named 'pkg_resources'
+INFO: 2024-11-10 18:20:32,059: process_command() 'Received command: []'
+INFO: 2024-11-10 18:20:32,060: start() 'Using data_path /usr/share/variety'
+INFO: 2024-11-10 18:20:32,060: load() 'Jumble loading'
+INFO: 2024-11-10 18:20:32,060: _walk_modules() 'Jumble loading module in __init__ from /usr/lib/python3.12/site-packages/variety/plugins/builtin/__init__.py'
+INFO: 2024-11-10 18:20:32,061: _walk_modules() 'Jumble loading module in WallhavenDownloader from /usr/lib/python3.12/site-packages/variety/plugins/builtin/downloaders/WallhavenDownloader.py'
+INFO: 2024-11-10 18:20:32,062: _walk_modules() 'Jumble loading module in MediaRSSDownloader from /usr/lib/python3.12/site-packages/variety/plugins/builtin/downloaders/MediaRSSDownloader.py'
+INFO: 2024-11-10 18:20:32,062: _walk_modules() 'Jumble loading module in __init__ from /usr/lib/python3.12/site-packages/variety/plugins/builtin/downloaders/__init__.py'
+INFO: 2024-11-10 18:20:32,063: _walk_modules() 'Jumble loading module in MediaRSSSource from /usr/lib/python3.12/site-packages/variety/plugins/builtin/downloaders/MediaRSSSource.py'
+INFO: 2024-11-10 18:20:32,063: load() 'Jumble found plugin class: <class 'MediaRSSSource.MediaRSSSource'>: {'name': 'MediaRSSSource', 'description': 'Configurable source for fetching images from MediaRSS feeds', 'author': 'Peter Levi', 'version': '0.1'}'
+INFO: 2024-11-10 18:20:32,063: _walk_modules() 'Jumble loading module in UnsplashConfigurableSource from /usr/lib/python3.12/site-packages/variety/plugins/builtin/downloaders/UnsplashConfigurableSource.py'
+INFO: 2024-11-10 18:20:32,065: load() 'Jumble found plugin class: <class 'UnsplashConfigurableSource.UnsplashConfigurableSource'>: {'name': 'UnsplashConfigurableSource', 'description': 'Configurable source for fetching photos from Unsplash.com', 'author': 'Peter Levi', 'version': '0.1'}'
+INFO: 2024-11-10 18:20:32,065: _walk_modules() 'Jumble loading module in WallhavenLegacyDownloader from /usr/lib/python3.12/site-packages/variety/plugins/builtin/downloaders/WallhavenLegacyDownloader.py'
+INFO: 2024-11-10 18:20:32,065: _walk_modules() 'Jumble loading module in ArtStationDownloader from /usr/lib/python3.12/site-packages/variety/plugins/builtin/downloaders/ArtStationDownloader.py'
+INFO: 2024-11-10 18:20:32,065: _walk_modules() 'Jumble loading module in EarthviewDownloader from /usr/lib/python3.12/site-packages/variety/plugins/builtin/downloaders/EarthviewDownloader.py'
+INFO: 2024-11-10 18:20:32,066: load() 'Jumble found plugin class: <class 'EarthviewDownloader.EarthviewDownloader'>: {'name': 'EarthviewDownloader', 'description': 'Google Earth View Wallpapers', 'author': 'Peter Levi', 'version': '0.1'}'
+INFO: 2024-11-10 18:20:32,066: _walk_modules() 'Jumble loading module in APODDownloader from /usr/lib/python3.12/site-packages/variety/plugins/builtin/downloaders/APODDownloader.py'
+INFO: 2024-11-10 18:20:32,066: load() 'Jumble found plugin class: <class 'APODDownloader.APODDownloader'>: {'name': 'APODDownloader', 'description': 'NASA Astro Pic of the Day', 'author': 'Peter Levi', 'version': '0.1'}'
+INFO: 2024-11-10 18:20:32,066: _walk_modules() 'Jumble loading module in UnsplashDownloader from /usr/lib/python3.12/site-packages/variety/plugins/builtin/downloaders/UnsplashDownloader.py'
+INFO: 2024-11-10 18:20:32,067: load() 'Jumble found plugin class: <class 'UnsplashDownloader.UnsplashDownloader'>: {'name': 'UnsplashDownloader', 'description': 'High-resolution photos from Unsplash.com', 'author': 'Peter Levi', 'version': '0.1'}'
+INFO: 2024-11-10 18:20:32,067: _walk_modules() 'Jumble loading module in RedditSource from /usr/lib/python3.12/site-packages/variety/plugins/builtin/downloaders/RedditSource.py'
+INFO: 2024-11-10 18:20:32,067: load() 'Jumble found plugin class: <class 'RedditSource.RedditSource'>: {'name': 'RedditSource', 'description': 'Configurable source for fetching images from Reddit', 'author': 'Peter Levi', 'version': '0.1'}'
+INFO: 2024-11-10 18:20:32,067: _walk_modules() 'Jumble loading module in NationalGeographicDownloader from /usr/lib/python3.12/site-packages/variety/plugins/builtin/downloaders/NationalGeographicDownloader.py'
+INFO: 2024-11-10 18:20:32,068: load() 'Jumble found plugin class: <class 'NationalGeographicDownloader.NationalGeographicDownloader'>: {'name': 'NationalGeographicDownloader', 'description': "National Geographic's photo of the day", 'author': 'Eric Rösch', 'version': '0.1'}'
+INFO: 2024-11-10 18:20:32,068: _walk_modules() 'Jumble loading module in RedditDownloader from /usr/lib/python3.12/site-packages/variety/plugins/builtin/downloaders/RedditDownloader.py'
+INFO: 2024-11-10 18:20:32,068: _walk_modules() 'Jumble loading module in WallhavenSource from /usr/lib/python3.12/site-packages/variety/plugins/builtin/downloaders/WallhavenSource.py'
+INFO: 2024-11-10 18:20:32,069: load() 'Jumble found plugin class: <class 'WallhavenSource.WallhavenSource'>: {'name': 'WallhavenSource', 'description': 'Configurable source for fetching images from Wallhaven.cc', 'author': 'Peter Levi', 'version': '0.1'}'
+INFO: 2024-11-10 18:20:32,069: _walk_modules() 'Jumble loading module in ArtStationSource from /usr/lib/python3.12/site-packages/variety/plugins/builtin/downloaders/ArtStationSource.py'
+INFO: 2024-11-10 18:20:32,069: load() 'Jumble found plugin class: <class 'ArtStationSource.ArtStationSource'>: {'name': 'ArtStationSource', 'description': 'Configurable source for fetching images from ArtStation', 'author': 'Denis Gordeev', 'version': '0.1'}'
+INFO: 2024-11-10 18:20:32,070: _walk_modules() 'Jumble loading module in BingDownloader from /usr/lib/python3.12/site-packages/variety/plugins/builtin/downloaders/BingDownloader.py'
+INFO: 2024-11-10 18:20:32,070: load() 'Jumble found plugin class: <class 'BingDownloader.BingDownloader'>: {'name': 'BingDownloader', 'description': 'Bing Photo of the Day', 'author': 'Peter Levi', 'version': '0.1'}'
+INFO: 2024-11-10 18:20:32,070: _walk_modules() 'Jumble loading module in __init__ from /usr/lib/python3.12/site-packages/variety/plugins/builtin/quotes/__init__.py'
+INFO: 2024-11-10 18:20:32,070: _walk_modules() 'Jumble loading module in LocalFilesSource from /usr/lib/python3.12/site-packages/variety/plugins/builtin/quotes/LocalFilesSource.py'
+INFO: 2024-11-10 18:20:32,071: load() 'Jumble found plugin class: <class 'LocalFilesSource.LocalFilesSource'>: {'name': 'Local text files', 'description': 'Displays quotes, defined in local text files.\nPut your own txt files in: ~/.config/variety/pluginconfig/quotes/.\nThe file format is:\n\nquote -- author\n.\nsecond quote -- another author\n.\netc...\n\nExample: http://rvelthuis.de/zips/quotes.txt', 'author': 'Peter Levi', 'version': '0.1'}'
+INFO: 2024-11-10 18:20:32,071: _walk_modules() 'Jumble loading module in QuotationsPageSource from /usr/lib/python3.12/site-packages/variety/plugins/builtin/quotes/QuotationsPageSource.py'
+INFO: 2024-11-10 18:20:32,104: load() 'Jumble found plugin class: <class 'QuotationsPageSource.QuotationsPageSource'>: {'name': 'TheQuotationsPage.com', 'description': 'Fetches quotes from TheQuotationsPage.com', 'author': 'Peter Levi', 'version': '0.1'}'
+INFO: 2024-11-10 18:20:32,104: _walk_modules() 'Jumble loading module in UrbanDictionarySource from /usr/lib/python3.12/site-packages/variety/plugins/builtin/quotes/UrbanDictionarySource.py'
+INFO: 2024-11-10 18:20:32,104: load() 'Jumble found plugin class: <class 'UrbanDictionarySource.UrbanDictionarySource'>: {'name': 'Urban Dictionary', 'description': 'Displays definitions from Urban Dictionary', 'author': 'James Miller', 'version': '0.1'}'
+INFO: 2024-11-10 18:20:32,105: _walk_modules() 'Jumble loading module in FortuneSource from /usr/lib/python3.12/site-packages/variety/plugins/builtin/quotes/FortuneSource.py'
+INFO: 2024-11-10 18:20:32,105: load() 'Jumble found plugin class: <class 'FortuneSource.FortuneSource'>: {'name': 'UNIX fortune program', 'description': 'Displays quotes using the UNIX fortune program. You may want to install additional fortune packs, e.g. fortunes-bofh-excuses.', 'author': 'Dan Jones', 'version': '0.1'}'
+INFO: 2024-11-10 18:20:32,105: _walk_modules() 'Jumble loading module in GoodreadsSource from /usr/lib/python3.12/site-packages/variety/plugins/builtin/quotes/GoodreadsSource.py'
+INFO: 2024-11-10 18:20:32,106: load() 'Jumble found plugin class: <class 'GoodreadsSource.GoodreadsSource'>: {'name': 'Goodreads', 'description': 'Fetches quotes from Goodreads.com', 'author': 'Peter Levi', 'version': '0.1'}'
+INFO: 2024-11-10 18:20:32,106: _walk_modules() 'Jumble loading module in __init__ from /usr/lib/python3.12/site-packages/variety/plugins/builtin/display_modes/__init__.py'
+INFO: 2024-11-10 18:20:32,106: _walk_modules() 'Jumble loading module in ResizingDisplayModesPlugin from /usr/lib/python3.12/site-packages/variety/plugins/builtin/display_modes/ResizingDisplayModesPlugin.py'
+INFO: 2024-11-10 18:20:32,106: load() 'Jumble found plugin class: <class 'ResizingDisplayModesPlugin.ResizingDisplayModesPlugin'>: {'name': 'ResizingDisplayModesPlugin', 'description': 'Display modes that use image resizing within Variety', 'version': '1.0', 'author': 'Peter Levi'}'
+INFO: 2024-11-10 18:20:32,107: _walk_modules() 'Jumble loading module in GnomeDisplayModesPlugin from /usr/lib/python3.12/site-packages/variety/plugins/builtin/display_modes/GnomeDisplayModesPlugin.py'
+INFO: 2024-11-10 18:20:32,107: load() 'Jumble found plugin class: <class 'GnomeDisplayModesPlugin.GnomeDisplayModesPlugin'>: {'name': 'GnomeDisplayModesPlugin', 'description': 'Display modes relying on the underlying desktop environment', 'version': '1.0', 'author': 'Peter Levi'}'
+INFO: 2024-11-10 18:20:32,107: _walk_modules() 'Jumble loading module in LegacyDisplayModesPlugin from /usr/lib/python3.12/site-packages/variety/plugins/builtin/display_modes/LegacyDisplayModesPlugin.py'
+INFO: 2024-11-10 18:20:32,107: load() 'Jumble found plugin class: <class 'LegacyDisplayModesPlugin.LegacyDisplayModesPlugin'>: {'name': 'LegacyDisplayModesPlugin', 'description': 'Legacy display mode for compatibility with past Variety versions', 'version': '1.0', 'author': 'Peter Levi'}'
+ERROR: 2024-11-10 18:20:32,108: get_xdg_pictures_folder() 'Could not get path to Pictures folder. Defaulting to ~/Pictures.'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/variety/Util.py", line 815, in get_xdg_pictures_folder
+    raise Exception("Could not get path to Pictures folder. Defaulting to ~/Pictures.")
+Exception: Could not get path to Pictures folder. Defaulting to ~/Pictures.
+ERROR: 2024-11-10 18:20:32,109: get_xdg_pictures_folder() 'Could not get path to Pictures folder. Defaulting to ~/Pictures.'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/variety/Util.py", line 815, in get_xdg_pictures_folder
+    raise Exception("Could not get path to Pictures folder. Defaulting to ~/Pictures.")
+Exception: Could not get path to Pictures folder. Defaulting to ~/Pictures.
+INFO: 2024-11-10 18:20:32,119: reload_config() 'Creating new downloader for type reddit, location https://www.reddit.com/user/everith/m/wp/'
+INFO: 2024-11-10 18:20:32,119: log_options() 'Loaded options:'
+INFO: 2024-11-10 18:20:32,119: log_options() 'change_enabled = False'
+INFO: 2024-11-10 18:20:32,119: log_options() 'change_interval = 1800'
+INFO: 2024-11-10 18:20:32,119: log_options() 'change_on_start = True'
+INFO: 2024-11-10 18:20:32,119: log_options() 'clipboard_enabled = True'
+INFO: 2024-11-10 18:20:32,119: log_options() 'clipboard_hosts = ['wallhaven.cc', 'wallpapers.net', 'flickr.com', 'imgur.com', 'deviantart.com', 'interfacelift.com', 'vladstudio.com', 'imageshack.us', 'deviantart.net', 'imageshack.com']'
+INFO: 2024-11-10 18:20:32,119: log_options() 'clipboard_use_whitelist = True'
+INFO: 2024-11-10 18:20:32,119: log_options() 'clock_date_font = Ubuntu Condensed, 30'
+INFO: 2024-11-10 18:20:32,119: log_options() 'clock_enabled = True'
+INFO: 2024-11-10 18:20:32,119: log_options() 'clock_filter = -density 100 -font `fc-match -f '%{file[0]}' '%CLOCK_FONT_NAME'` -pointsize %CLOCK_FONT_SIZE -gravity SouthEast -fill '#00000044' -annotate 0x0+[%HOFFSET+58]+[%VOFFSET+108] '%H:%M' -fill white -annotate 0x0+[%HOFFSET+60]+[%VOFFSET+110] '%H:%M' -font `fc-match -f '%{file[0]}' '%DATE_FONT_NAME'` -pointsize %DATE_FONT_SIZE -fill '#00000044' -annotate 0x0+[%HOFFSET+58]+[%VOFFSET+58] '%A, %B %d' -fill white -annotate 0x0+[%HOFFSET+60]+[%VOFFSET+60] '%A, %B %d''
+INFO: 2024-11-10 18:20:32,119: log_options() 'clock_font = Ubuntu Condensed, 70'
+INFO: 2024-11-10 18:20:32,119: log_options() 'configfile = /home/erik/.config/variety/variety.conf'
+INFO: 2024-11-10 18:20:32,119: log_options() 'copyto_enabled = False'
+INFO: 2024-11-10 18:20:32,119: log_options() 'copyto_folder = Default'
+INFO: 2024-11-10 18:20:32,119: log_options() 'desired_color = [160, 160, 160]'
+INFO: 2024-11-10 18:20:32,119: log_options() 'desired_color_enabled = False'
+INFO: 2024-11-10 18:20:32,119: log_options() 'download_folder = /home/erik/.config/variety/Downloaded'
+INFO: 2024-11-10 18:20:32,119: log_options() 'download_preference_ratio = 0.9'
+INFO: 2024-11-10 18:20:32,119: log_options() 'favorites_folder = /home/erik/.config/variety/Favorites'
+INFO: 2024-11-10 18:20:32,119: log_options() 'favorites_operations = [['Downloaded', 'Copy'], ['Fetched', 'Move'], ['Others', 'Copy']]'
+INFO: 2024-11-10 18:20:32,119: log_options() 'fetched_folder = /home/erik/.config/variety/Fetched'
+INFO: 2024-11-10 18:20:32,119: log_options() 'filters = [[False, 'Keep original', ''], [False, 'Grayscale', '-type Grayscale'], [False, 'Heavy blur', '-scale 20% -blur 0x10 -resize 500%'], [False, 'Soft blur', '-scale 20% -blur 0x2 -resize 500%'], [False, 'Oil painting', '-paint 8'], [False, 'Pointilism', '-spread 10 -noise 3'], [False, 'Pixellate', '-scale 3% -scale 3333%']]'
+INFO: 2024-11-10 18:20:32,120: log_options() 'get_wallpaper_script = /home/erik/.config/variety/scripts/get_wallpaper'
+INFO: 2024-11-10 18:20:32,120: log_options() 'icon = Current'
+INFO: 2024-11-10 18:20:32,120: log_options() 'internet_enabled = True'
+INFO: 2024-11-10 18:20:32,120: log_options() 'lightness_enabled = False'
+INFO: 2024-11-10 18:20:32,120: log_options() 'lightness_mode = 0'
+INFO: 2024-11-10 18:20:32,120: log_options() 'min_rating = 4'
+INFO: 2024-11-10 18:20:32,120: log_options() 'min_rating_enabled = False'
+INFO: 2024-11-10 18:20:32,120: log_options() 'min_size = 80'
+INFO: 2024-11-10 18:20:32,120: log_options() 'min_size_enabled = False'
+INFO: 2024-11-10 18:20:32,120: log_options() 'quota_enabled = True'
+INFO: 2024-11-10 18:20:32,120: log_options() 'quota_size = 1000'
+INFO: 2024-11-10 18:20:32,120: log_options() 'quotes_authors = '
+INFO: 2024-11-10 18:20:32,120: log_options() 'quotes_bg_color = [80, 80, 80]'
+INFO: 2024-11-10 18:20:32,120: log_options() 'quotes_bg_opacity = 55'
+INFO: 2024-11-10 18:20:32,120: log_options() 'quotes_change_enabled = False'
+INFO: 2024-11-10 18:20:32,120: log_options() 'quotes_change_interval = 300'
+INFO: 2024-11-10 18:20:32,120: log_options() 'quotes_disabled_sources = ['Local text files', 'TheQuotationsPage.com', 'UNIX fortune program', 'Urban Dictionary']'
+INFO: 2024-11-10 18:20:32,120: log_options() 'quotes_enabled = False'
+INFO: 2024-11-10 18:20:32,120: log_options() 'quotes_favorites_file = /home/erik/.config/variety/favorite_quotes.txt'
+INFO: 2024-11-10 18:20:32,120: log_options() 'quotes_font = Bitstream Charter 30'
+INFO: 2024-11-10 18:20:32,120: log_options() 'quotes_hpos = 100'
+INFO: 2024-11-10 18:20:32,120: log_options() 'quotes_max_length = 250'
+INFO: 2024-11-10 18:20:32,120: log_options() 'quotes_tags = '
+INFO: 2024-11-10 18:20:32,120: log_options() 'quotes_text_color = [255, 255, 255]'
+INFO: 2024-11-10 18:20:32,120: log_options() 'quotes_text_shadow = False'
+INFO: 2024-11-10 18:20:32,120: log_options() 'quotes_vpos = 40'
+INFO: 2024-11-10 18:20:32,120: log_options() 'quotes_width = 70'
+INFO: 2024-11-10 18:20:32,120: log_options() 'safe_mode = False'
+INFO: 2024-11-10 18:20:32,120: log_options() 'set_wallpaper_script = /home/erik/.config/variety/scripts/set_wallpaper'
+INFO: 2024-11-10 18:20:32,120: log_options() 'slideshow_custom_enabled = False'
+INFO: 2024-11-10 18:20:32,120: log_options() 'slideshow_custom_folder = /home/erik/Pictures'
+INFO: 2024-11-10 18:20:32,120: log_options() 'slideshow_downloads_enabled = False'
+INFO: 2024-11-10 18:20:32,120: log_options() 'slideshow_fade = 0.4'
+INFO: 2024-11-10 18:20:32,120: log_options() 'slideshow_favorites_enabled = True'
+INFO: 2024-11-10 18:20:32,120: log_options() 'slideshow_mode = Fullscreen'
+INFO: 2024-11-10 18:20:32,120: log_options() 'slideshow_monitor = All'
+INFO: 2024-11-10 18:20:32,120: log_options() 'slideshow_pan = 0.05'
+INFO: 2024-11-10 18:20:32,120: log_options() 'slideshow_seconds = 6.0'
+INFO: 2024-11-10 18:20:32,120: log_options() 'slideshow_sort_order = Random'
+INFO: 2024-11-10 18:20:32,120: log_options() 'slideshow_sources_enabled = True'
+INFO: 2024-11-10 18:20:32,120: log_options() 'slideshow_zoom = 0.2'
+INFO: 2024-11-10 18:20:32,120: log_options() 'smart_enabled = False'
+INFO: 2024-11-10 18:20:32,120: log_options() 'smart_notice_shown = False'
+INFO: 2024-11-10 18:20:32,120: log_options() 'smart_register_shown = False'
+INFO: 2024-11-10 18:20:32,121: log_options() 'sources = [[False, 'favorites', 'The Favorites folder'], [False, 'fetched', 'The Fetched folder'], [False, 'folder', '/usr/share/backgrounds'], [False, 'flickr', 'user:www.flickr.com/photos/peter-levi/;user_id:93647178@N00;'], [False, 'apod', "NASA's Astronomy Picture of the Day"], [False, 'bing', 'Bing Photo of the Day'], [False, 'earthview', 'Google Earth View Wallpapers'], [False, 'unsplash', 'High-resolution photos from Unsplash.com'], [True, 'reddit', 'https://www.reddit.com/user/everith/m/wp/'], [False, 'natgeo', "National Geographic's photo of the day"]]'
+INFO: 2024-11-10 18:20:32,121: log_options() 'stats_enabled = True'
+INFO: 2024-11-10 18:20:32,121: log_options() 'stats_notice_shown = False'
+INFO: 2024-11-10 18:20:32,121: log_options() 'sync_enabled = True'
+INFO: 2024-11-10 18:20:32,121: log_options() 'use_landscape_enabled = True'
+INFO: 2024-11-10 18:20:32,121: log_options() 'wallhaven_api_key = '
+INFO: 2024-11-10 18:20:32,121: log_options() 'wallpaper_auto_rotate = False'
+INFO: 2024-11-10 18:20:32,121: log_options() 'wallpaper_display_mode = smart'
+INFO: 2024-11-10 18:20:32,121: reload_config() 'No need to clear prepared queue'
+INFO: 2024-11-10 18:20:32,121: clock_thread_method() 'clock thread running'
+INFO: 2024-11-10 18:20:32,121: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/mzvef7z36lzd1.jpeg'
+INFO: 2024-11-10 18:20:32,122: load_banned() 'Missing or invalid banned URLs list, no URLs will be banned'
+INFO: 2024-11-10 18:20:32,122: load_last_change_time() 'Change interval < 6 hours, ignore persisted last_change_time, wait initially the whole interval: 1800'
+INFO: 2024-11-10 18:20:32,122: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/mzvef7z36lzd1.jpeg'
+INFO: 2024-11-10 18:20:32,123: regular_change_thread() 'regular_change thread running'
+INFO: 2024-11-10 18:20:32,123: prepare_thread() 'Prepare thread running'
+INFO: 2024-11-10 18:20:32,123: prepare_thread() 'Prepared buffer contains 0 images'
+INFO: 2024-11-10 18:20:32,123: prepare_thread() 'Preparing some images'
+INFO: 2024-11-10 18:20:32,125: update_indicator_icon() 'Creating indicator'
+WARNING: 2024-11-10 18:20:32,156: create_menu() 'Variety Slideshow is not installed. This is an optional extension adding pan-and-zoom slideshows to Variety: see https://github.com/peterlevi/variety-slideshow for details'
+INFO: 2024-11-10 18:20:32,157: create_indicator() 'indicator backend: AppIndicator3'
+INFO: 2024-11-10 18:20:32,161: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/mzvef7z36lzd1.jpeg'
+INFO: 2024-11-10 18:20:32,162: prepare_thread() 'After search prepared buffer contains 30 images'
+INFO: 2024-11-10 18:20:32,222: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/mzvef7z36lzd1.jpeg, time: 1731259232.2229173'
+INFO: 2024-11-10 18:20:32,225: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:3840, ih:2160, scw:1920, sch:1080, ho:0, vo:0'
+INFO: 2024-11-10 18:20:32,225: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:20' -fill white -annotate 0x0+60+110 '18:20' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10''
+INFO: 2024-11-10 18:20:32,225: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/mzvef7z36lzd1.jpeg -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:20' -fill white -annotate 0x0+60+110 '18:20' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-1bcc380e8a5bb58decc77f5bf6a02cbd.jpg'
+INFO: 2024-11-10 18:20:32,534: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/mzvef7z36lzd1.jpeg'
+INFO: 2024-11-10 18:20:32,535: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:20:32,699: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/mzvef7z36lzd1.jpeg'
+INFO: 2024-11-10 18:20:33,121: clock_thread_method() 'clock_thread updates wallpaper'
+INFO: 2024-11-10 18:20:33,223: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/mzvef7z36lzd1.jpeg, time: 1731259233.2234254'
+INFO: 2024-11-10 18:20:33,224: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:3840, ih:2160, scw:1920, sch:1080, ho:0, vo:0'
+INFO: 2024-11-10 18:20:33,224: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:20' -fill white -annotate 0x0+60+110 '18:20' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10''
+INFO: 2024-11-10 18:20:33,224: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/mzvef7z36lzd1.jpeg -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:20' -fill white -annotate 0x0+60+110 '18:20' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-1e890e2d913731e13ba09e738f9ffb90.jpg'
+INFO: 2024-11-10 18:20:33,426: reload() 'Reloading preferences dialog'
+ERROR: 2024-11-10 18:20:33,426: get_xdg_pictures_folder() 'Could not get path to Pictures folder. Defaulting to ~/Pictures.'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/variety/Util.py", line 815, in get_xdg_pictures_folder
+    raise Exception("Could not get path to Pictures folder. Defaulting to ~/Pictures.")
+Exception: Could not get path to Pictures folder. Defaulting to ~/Pictures.
+ERROR: 2024-11-10 18:20:33,428: get_xdg_pictures_folder() 'Could not get path to Pictures folder. Defaulting to ~/Pictures.'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/variety/Util.py", line 815, in get_xdg_pictures_folder
+    raise Exception("Could not get path to Pictures folder. Defaulting to ~/Pictures.")
+Exception: Could not get path to Pictures folder. Defaulting to ~/Pictures.
+ERROR: 2024-11-10 18:20:33,430: get_xdg_pictures_folder() 'Could not get path to Pictures folder. Defaulting to ~/Pictures.'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/variety/Util.py", line 815, in get_xdg_pictures_folder
+    raise Exception("Could not get path to Pictures folder. Defaulting to ~/Pictures.")
+Exception: Could not get path to Pictures folder. Defaulting to ~/Pictures.
+ERROR: 2024-11-10 18:20:33,431: get_file_icon_name() 'Exception while obtaining folder icon for /home/erik/Pictures:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/variety/Util.py", line 800, in get_file_icon_name
+    query_info = f.query_info("standard::icon", Gio.FileQueryInfoFlags.NONE, None)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+gi.repository.GLib.GError: g-io-error-quark: Error when getting information for file “/home/erik/Pictures”: No such file or directory (1)
+ERROR: 2024-11-10 18:20:33,432: get_file_icon_name() 'Exception while obtaining folder icon for /home/erik/Pictures:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/variety/Util.py", line 800, in get_file_icon_name
+    query_info = f.query_info("standard::icon", Gio.FileQueryInfoFlags.NONE, None)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+gi.repository.GLib.GError: g-io-error-quark: Error when getting information for file “/home/erik/Pictures”: No such file or directory (1)
+INFO: 2024-11-10 18:20:33,552: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/mzvef7z36lzd1.jpeg'
+INFO: 2024-11-10 18:20:33,553: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:20:33,868: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/mzvef7z36lzd1.jpeg'
+INFO: 2024-11-10 18:20:34,163: trigger_download() 'Triggering download thread to check if download needed and possible'
+INFO: 2024-11-10 18:20:35,612: process_command() 'Received command: ['-n']'
+INFO: 2024-11-10 18:20:35,614: set_wallpaper() 'Calling set_wallpaper with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/nzx3460i9nzd1.jpeg'
+INFO: 2024-11-10 18:20:35,614: prepare_thread() 'Prepared buffer contains 30 images'
+INFO: 2024-11-10 18:20:35,615: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/nzx3460i9nzd1.jpeg, time: 1731259235.615762'
+INFO: 2024-11-10 18:20:35,617: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:3840, ih:2160, scw:1920, sch:1080, ho:0, vo:0'
+INFO: 2024-11-10 18:20:35,617: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:20' -fill white -annotate 0x0+60+110 '18:20' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10''
+INFO: 2024-11-10 18:20:35,617: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/nzx3460i9nzd1.jpeg -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:20' -fill white -annotate 0x0+60+110 '18:20' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-a35ddff13bb5e4ccbe16f0b2edd73348.jpg'
+INFO: 2024-11-10 18:20:35,947: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/nzx3460i9nzd1.jpeg'
+INFO: 2024-11-10 18:20:35,948: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:20:36,162: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/nzx3460i9nzd1.jpeg'
+INFO: 2024-11-10 18:20:37,124: set_wallpaper() 'Calling set_wallpaper with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/em2yphe04szd1.png'
+INFO: 2024-11-10 18:20:37,125: prepare_thread() 'Prepared buffer contains 30 images'
+INFO: 2024-11-10 18:20:37,128: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/em2yphe04szd1.png, time: 1731259237.1283603'
+INFO: 2024-11-10 18:20:37,134: regular_change_thread() 'regular_change: waiting till user resumes'
+INFO: 2024-11-10 18:20:37,135: apply_display_mode() 'ImageMagick display mode cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/em2yphe04szd1.png -resize 1920x1080^ -gravity center -extent 1920x1080 -scale 10% -blur 0x3 -resize 1000% -clone 0 -resize 1920x1080 -size 1920x1080 -gravity center -composite /home/erik/.config/variety/wallpaper/wallpaper-zoomed-f0cae1c1cd44deed6664f1bc310f26c1.jpg'
+INFO: 2024-11-10 18:20:37,615: trigger_download() 'Triggering download thread to check if download needed and possible'
+INFO: 2024-11-10 18:20:37,616: trigger_download() 'Triggering download thread to check if download needed and possible'
+INFO: 2024-11-10 18:20:38,182: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:1920, ih:1080, scw:1920, sch:1080, ho:0, vo:0'
+INFO: 2024-11-10 18:20:38,182: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:20' -fill white -annotate 0x0+60+110 '18:20' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10''
+INFO: 2024-11-10 18:20:38,182: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/wallpaper/wallpaper-zoomed-f0cae1c1cd44deed6664f1bc310f26c1.jpg -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:20' -fill white -annotate 0x0+60+110 '18:20' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-a9660fb474b2cfc64f6a9a604a19c945.jpg'
+INFO: 2024-11-10 18:20:38,353: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/em2yphe04szd1.png'
+INFO: 2024-11-10 18:20:38,355: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:20:38,568: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/em2yphe04szd1.png'
+INFO: 2024-11-10 18:20:39,127: trigger_download() 'Triggering download thread to check if download needed and possible'
+INFO: 2024-11-10 18:20:39,127: trigger_download() 'Triggering download thread to check if download needed and possible'
+INFO: 2024-11-10 18:20:52,125: server_options_thread() 'Fetching server options from http://tiny.cc/variety-options-063'
+ERROR: 2024-11-10 18:20:53,199: server_options_thread() 'Could not fetch Variety serverside options'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/requests/models.py", line 974, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/variety/VarietyWindow.py", line 1084, in server_options_thread
+    self.server_options = Util.fetch_json(VarietyWindow.SERVERSIDE_OPTIONS_URL)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/variety/Util.py", line 684, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/requests/models.py", line 978, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+INFO: 2024-11-10 18:21:00,135: clock_thread_method() 'clock_thread updates wallpaper'
+INFO: 2024-11-10 18:21:00,137: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/em2yphe04szd1.png, time: 1731259260.1370728'
+INFO: 2024-11-10 18:21:00,145: apply_display_mode() 'ImageMagick display mode cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/em2yphe04szd1.png -resize 1920x1080^ -gravity center -extent 1920x1080 -scale 10% -blur 0x3 -resize 1000% -clone 0 -resize 1920x1080 -size 1920x1080 -gravity center -composite /home/erik/.config/variety/wallpaper/wallpaper-zoomed-fc58a83f0c0750e70cb7afeab3947d6e.jpg'
+INFO: 2024-11-10 18:21:01,168: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:1920, ih:1080, scw:1920, sch:1080, ho:0, vo:0'
+INFO: 2024-11-10 18:21:01,168: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:21' -fill white -annotate 0x0+60+110 '18:21' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10''
+INFO: 2024-11-10 18:21:01,168: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/wallpaper/wallpaper-zoomed-fc58a83f0c0750e70cb7afeab3947d6e.jpg -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:21' -fill white -annotate 0x0+60+110 '18:21' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-d5b32a27254bb554f59bb09490766283.jpg'
+INFO: 2024-11-10 18:21:01,337: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/em2yphe04szd1.png'
+INFO: 2024-11-10 18:21:01,339: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:21:01,552: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/em2yphe04szd1.png'
+INFO: 2024-11-10 18:21:23,206: server_options_thread() 'Fetching server options from http://tiny.cc/variety-options-063'
+ERROR: 2024-11-10 18:21:24,292: server_options_thread() 'Could not fetch Variety serverside options'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/requests/models.py", line 974, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/variety/VarietyWindow.py", line 1084, in server_options_thread
+    self.server_options = Util.fetch_json(VarietyWindow.SERVERSIDE_OPTIONS_URL)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/variety/Util.py", line 684, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/requests/models.py", line 978, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+INFO: 2024-11-10 18:21:28,936: process_command() 'Received command: ['--set=/server/dev/Pictures/wallpapper/desktop/0/0936361420210706.jpg']'
+INFO: 2024-11-10 18:21:28,938: set_wallpaper() 'Calling set_wallpaper with /server/dev/Pictures/wallpapper/desktop/0/0936361420210706.jpg'
+INFO: 2024-11-10 18:21:28,954: do_set_wp() 'Calling do_set_wp with /server/dev/Pictures/wallpapper/desktop/0/0936361420210706.jpg, time: 1731259288.95472'
+INFO: 2024-11-10 18:21:28,992: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:3839, ih:2160, scw:1920, sch:1080, ho:0, vo:0'
+INFO: 2024-11-10 18:21:28,992: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:21' -fill white -annotate 0x0+60+110 '18:21' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10''
+INFO: 2024-11-10 18:21:28,992: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /server/dev/Pictures/wallpapper/desktop/0/0936361420210706.jpg -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:21' -fill white -annotate 0x0+60+110 '18:21' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-5f2785b99ae88f2f0dcd66aad0c9a69f.jpg'
+INFO: 2024-11-10 18:21:29,351: update_indicator() 'Setting file info to: /server/dev/Pictures/wallpapper/desktop/0/0936361420210706.jpg'
+INFO: 2024-11-10 18:21:29,358: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:21:29,566: set_icon() 'Showing indicator icon image: /server/dev/Pictures/wallpapper/desktop/0/0936361420210706.jpg'
+INFO: 2024-11-10 18:21:54,294: server_options_thread() 'Fetching server options from http://tiny.cc/variety-options-063'
+ERROR: 2024-11-10 18:21:55,254: server_options_thread() 'Could not fetch Variety serverside options'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/requests/models.py", line 974, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/variety/VarietyWindow.py", line 1084, in server_options_thread
+    self.server_options = Util.fetch_json(VarietyWindow.SERVERSIDE_OPTIONS_URL)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/variety/Util.py", line 684, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/requests/models.py", line 978, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+INFO: 2024-11-10 18:21:58,681: process_command() 'Received command: ['--set=/server/dev/Pictures/wallpapper/desktop/0/0936361420210706.jpg', '-v']'
+INFO: 2024-11-10 18:21:58,683: set_wallpaper() 'Calling set_wallpaper with /server/dev/Pictures/wallpapper/desktop/0/0936361420210706.jpg'
+INFO: 2024-11-10 18:22:00,162: clock_thread_method() 'clock_thread updates wallpaper'
+INFO: 2024-11-10 18:22:00,164: do_set_wp() 'Calling do_set_wp with /server/dev/Pictures/wallpapper/desktop/0/0936361420210706.jpg, time: 1731259320.1642792'
+INFO: 2024-11-10 18:22:00,194: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:3839, ih:2160, scw:1920, sch:1080, ho:0, vo:0'
+INFO: 2024-11-10 18:22:00,195: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:22' -fill white -annotate 0x0+60+110 '18:22' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10''
+INFO: 2024-11-10 18:22:00,195: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /server/dev/Pictures/wallpapper/desktop/0/0936361420210706.jpg -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:22' -fill white -annotate 0x0+60+110 '18:22' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-0b32db72a5a6778d47b8420f0d99c896.jpg'
+INFO: 2024-11-10 18:22:00,557: update_indicator() 'Setting file info to: /server/dev/Pictures/wallpapper/desktop/0/0936361420210706.jpg'
+INFO: 2024-11-10 18:22:00,566: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:22:00,722: set_icon() 'Showing indicator icon image: /server/dev/Pictures/wallpapper/desktop/0/0936361420210706.jpg'
+INFO: 2024-11-10 18:22:07,552: process_command() 'Received command: ['-v', '--set=/server/dev/Pictures/wallpapper/desktop/0/0936361420210706.jpg']'
+INFO: 2024-11-10 18:22:07,554: set_wallpaper() 'Calling set_wallpaper with /server/dev/Pictures/wallpapper/desktop/0/0936361420210706.jpg'
+INFO: 2024-11-10 18:22:11,571: process_command() 'Received command: ['-v']'
+INFO: 2024-11-10 18:22:25,258: server_options_thread() 'Fetching server options from http://tiny.cc/variety-options-063'
+ERROR: 2024-11-10 18:22:26,181: server_options_thread() 'Could not fetch Variety serverside options'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/requests/models.py", line 974, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/variety/VarietyWindow.py", line 1084, in server_options_thread
+    self.server_options = Util.fetch_json(VarietyWindow.SERVERSIDE_OPTIONS_URL)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/variety/Util.py", line 684, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/requests/models.py", line 978, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+INFO: 2024-11-10 18:22:56,186: server_options_thread() 'Fetching server options from http://tiny.cc/variety-options-063'
+ERROR: 2024-11-10 18:22:57,206: server_options_thread() 'Could not fetch Variety serverside options'
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/requests/models.py", line 974, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/site-packages/variety/VarietyWindow.py", line 1084, in server_options_thread
+    self.server_options = Util.fetch_json(VarietyWindow.SERVERSIDE_OPTIONS_URL)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/variety/Util.py", line 684, in fetch_json
+    return Util.request(url, data, **request_kwargs).json()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/site-packages/requests/models.py", line 978, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+INFO: 2024-11-10 18:23:00,197: clock_thread_method() 'clock_thread updates wallpaper'
+INFO: 2024-11-10 18:23:00,198: do_set_wp() 'Calling do_set_wp with /server/dev/Pictures/wallpapper/desktop/0/0936361420210706.jpg, time: 1731259380.1983058'
+INFO: 2024-11-10 18:23:00,228: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:3839, ih:2160, scw:1920, sch:1080, ho:0, vo:0'
+INFO: 2024-11-10 18:23:00,229: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:23' -fill white -annotate 0x0+60+110 '18:23' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10''
+INFO: 2024-11-10 18:23:00,229: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /server/dev/Pictures/wallpapper/desktop/0/0936361420210706.jpg -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:23' -fill white -annotate 0x0+60+110 '18:23' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-ea93aa3c38327663376e18d9bf31692d.jpg'
+INFO: 2024-11-10 18:23:00,572: update_indicator() 'Setting file info to: /server/dev/Pictures/wallpapper/desktop/0/0936361420210706.jpg'
+INFO: 2024-11-10 18:23:00,586: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:23:00,787: set_icon() 'Showing indicator icon image: /server/dev/Pictures/wallpapper/desktop/0/0936361420210706.jpg'
+INFO: 2024-11-10 18:23:39,129: get_throttling() 'Reddit: parsing serverside options'
+INFO: 2024-11-10 18:23:39,130: get_throttling() 'Could not parse Reddit serverside options, using defaults None, None'
+INFO: 2024-11-10 18:23:39,130: get_throttling() 'Reddit: parsing serverside options'
+INFO: 2024-11-10 18:23:39,130: get_throttling() 'Could not parse Reddit serverside options, using defaults None, None'
+INFO: 2024-11-10 18:23:39,131: download_one() 'Reddit: Downloading an image, config: https://www.reddit.com/user/everith/m/wp/'
+INFO: 2024-11-10 18:23:39,131: download_one() 'Reddit: Queue size: 0'
+INFO: 2024-11-10 18:23:39,131: get_throttling() 'Reddit: parsing serverside options'
+INFO: 2024-11-10 18:23:39,131: get_throttling() 'Could not parse Reddit serverside options, using defaults None, None'
+INFO: 2024-11-10 18:23:39,131: download_one() 'Reddit: Filling queue'
+INFO: 2024-11-10 18:23:39,132: fill_queue() 'Reddit URL: https://www.reddit.com/user/everith/m/wp/'
+INFO: 2024-11-10 18:23:41,243: download_one() 'Reddit: Queue populated with 81 URLs'
+INFO: 2024-11-10 18:23:41,244: save_locally() 'Origin URL: https://www.reddit.com/r/Animewallpaper/comments/1gn654g/chisato_lycoris_recoil_1500x3461/'
+INFO: 2024-11-10 18:23:41,244: save_locally() 'Image URL: https://i.redd.it/gu9hfzn3duzd1.jpeg'
+INFO: 2024-11-10 18:23:41,244: save_locally() 'Local path: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/gu9hfzn3duzd1.jpeg'
+INFO: 2024-11-10 18:23:41,244: save_locally() 'File already exists, skip downloading'
+INFO: 2024-11-10 18:23:50,825: process_command() 'Received command: ['-n']'
+INFO: 2024-11-10 18:23:50,828: set_wallpaper() 'Calling set_wallpaper with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4i6b4ojiryzd1.jpeg'
+INFO: 2024-11-10 18:23:50,828: prepare_thread() 'Prepared buffer contains 30 images'
+INFO: 2024-11-10 18:23:50,829: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4i6b4ojiryzd1.jpeg, time: 1731259430.8292937'
+INFO: 2024-11-10 18:23:50,830: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:3840, ih:2400, scw:1920, sch:1200, ho:0, vo:60'
+INFO: 2024-11-10 18:23:50,830: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+168 '18:23' -fill white -annotate 0x0+60+170 '18:23' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+118 'Sunday, November 10' -fill white -annotate 0x0+60+120 'Sunday, November 10''
+INFO: 2024-11-10 18:23:50,831: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4i6b4ojiryzd1.jpeg -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+168 '18:23' -fill white -annotate 0x0+60+170 '18:23' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+118 'Sunday, November 10' -fill white -annotate 0x0+60+120 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-5ea4caa46ce7ef2426529843b40df80c.jpg'
+INFO: 2024-11-10 18:23:51,176: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4i6b4ojiryzd1.jpeg'
+INFO: 2024-11-10 18:23:51,177: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:23:51,441: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4i6b4ojiryzd1.jpeg'
+INFO: 2024-11-10 18:23:52,829: trigger_download() 'Triggering download thread to check if download needed and possible'
+INFO: 2024-11-10 18:23:52,829: trigger_download() 'Triggering download thread to check if download needed and possible'
+INFO: 2024-11-10 18:24:00,248: clock_thread_method() 'clock_thread updates wallpaper'
+INFO: 2024-11-10 18:24:00,249: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4i6b4ojiryzd1.jpeg, time: 1731259440.2494173'
+INFO: 2024-11-10 18:24:00,251: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:3840, ih:2400, scw:1920, sch:1200, ho:0, vo:60'
+INFO: 2024-11-10 18:24:00,251: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+168 '18:24' -fill white -annotate 0x0+60+170 '18:24' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+118 'Sunday, November 10' -fill white -annotate 0x0+60+120 'Sunday, November 10''
+INFO: 2024-11-10 18:24:00,251: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4i6b4ojiryzd1.jpeg -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+168 '18:24' -fill white -annotate 0x0+60+170 '18:24' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+118 'Sunday, November 10' -fill white -annotate 0x0+60+120 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-a0464a3be4c4d3b12ec57b3cb62a0c0f.jpg'
+INFO: 2024-11-10 18:24:00,597: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4i6b4ojiryzd1.jpeg'
+INFO: 2024-11-10 18:24:00,598: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:24:00,812: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4i6b4ojiryzd1.jpeg'
+INFO: 2024-11-10 18:25:00,271: clock_thread_method() 'clock_thread updates wallpaper'
+INFO: 2024-11-10 18:25:00,272: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4i6b4ojiryzd1.jpeg, time: 1731259500.2723553'
+INFO: 2024-11-10 18:25:00,273: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:3840, ih:2400, scw:1920, sch:1200, ho:0, vo:60'
+INFO: 2024-11-10 18:25:00,273: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+168 '18:25' -fill white -annotate 0x0+60+170 '18:25' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+118 'Sunday, November 10' -fill white -annotate 0x0+60+120 'Sunday, November 10''
+INFO: 2024-11-10 18:25:00,273: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4i6b4ojiryzd1.jpeg -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+168 '18:25' -fill white -annotate 0x0+60+170 '18:25' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+118 'Sunday, November 10' -fill white -annotate 0x0+60+120 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-29e4963dfe0aabfb979e8a91a9bed078.jpg'
+INFO: 2024-11-10 18:25:00,638: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4i6b4ojiryzd1.jpeg'
+INFO: 2024-11-10 18:25:00,639: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:25:00,853: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4i6b4ojiryzd1.jpeg'
+INFO: 2024-11-10 18:25:20,200: process_command() 'Received command: ['-n']'
+INFO: 2024-11-10 18:25:20,202: set_wallpaper() 'Calling set_wallpaper with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/pabd7fizz00e1.jpeg'
+INFO: 2024-11-10 18:25:20,202: prepare_thread() 'Prepared buffer contains 30 images'
+INFO: 2024-11-10 18:25:20,203: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/pabd7fizz00e1.jpeg, time: 1731259520.203014'
+INFO: 2024-11-10 18:25:20,204: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:1920, ih:1080, scw:1920, sch:1080, ho:0, vo:0'
+INFO: 2024-11-10 18:25:20,204: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:25' -fill white -annotate 0x0+60+110 '18:25' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10''
+INFO: 2024-11-10 18:25:20,204: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/pabd7fizz00e1.jpeg -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:25' -fill white -annotate 0x0+60+110 '18:25' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-f2bf96c49e9d29e58a7ee52326dac2b9.jpg'
+INFO: 2024-11-10 18:25:20,343: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/pabd7fizz00e1.jpeg'
+INFO: 2024-11-10 18:25:20,344: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:25:20,558: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/pabd7fizz00e1.jpeg'
+INFO: 2024-11-10 18:25:22,203: trigger_download() 'Triggering download thread to check if download needed and possible'
+INFO: 2024-11-10 18:25:22,203: trigger_download() 'Triggering download thread to check if download needed and possible'
+INFO: 2024-11-10 18:25:22,203: get_throttling() 'Reddit: parsing serverside options'
+INFO: 2024-11-10 18:25:22,203: get_throttling() 'Could not parse Reddit serverside options, using defaults None, None'
+INFO: 2024-11-10 18:25:22,203: get_throttling() 'Reddit: parsing serverside options'
+INFO: 2024-11-10 18:25:22,203: get_throttling() 'Could not parse Reddit serverside options, using defaults None, None'
+INFO: 2024-11-10 18:25:22,203: download_one() 'Reddit: Downloading an image, config: https://www.reddit.com/user/everith/m/wp/'
+INFO: 2024-11-10 18:25:22,203: download_one() 'Reddit: Queue size: 80'
+INFO: 2024-11-10 18:25:22,203: download_one() 'Reddit: Queue populated with 80 URLs'
+INFO: 2024-11-10 18:25:22,203: save_locally() 'Origin URL: https://www.reddit.com/r/wallpaper/comments/1gn59dc/hey_2560x1440/'
+INFO: 2024-11-10 18:25:22,203: save_locally() 'Image URL: https://i.redd.it/fg3hsxdl1uzd1.png'
+INFO: 2024-11-10 18:25:22,204: save_locally() 'Local path: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/fg3hsxdl1uzd1.png'
+INFO: 2024-11-10 18:25:22,204: save_locally() 'File already exists, skip downloading'
+INFO: 2024-11-10 18:25:22,216: process_command() 'Received command: ['-n']'
+INFO: 2024-11-10 18:25:22,218: set_wallpaper() 'Calling set_wallpaper with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/ehg0qna9kszd1.jpeg'
+INFO: 2024-11-10 18:25:22,219: prepare_thread() 'Prepared buffer contains 29 images'
+INFO: 2024-11-10 18:25:22,219: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/ehg0qna9kszd1.jpeg, time: 1731259522.219344'
+INFO: 2024-11-10 18:25:22,220: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:3840, ih:2400, scw:1920, sch:1200, ho:0, vo:60'
+INFO: 2024-11-10 18:25:22,220: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+168 '18:25' -fill white -annotate 0x0+60+170 '18:25' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+118 'Sunday, November 10' -fill white -annotate 0x0+60+120 'Sunday, November 10''
+INFO: 2024-11-10 18:25:22,220: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/ehg0qna9kszd1.jpeg -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+168 '18:25' -fill white -annotate 0x0+60+170 '18:25' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+118 'Sunday, November 10' -fill white -annotate 0x0+60+120 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-7f06bddd8afd796fadf1e57d53520e6e.jpg'
+INFO: 2024-11-10 18:25:22,579: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/ehg0qna9kszd1.jpeg'
+INFO: 2024-11-10 18:25:22,580: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:25:22,844: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/ehg0qna9kszd1.jpeg'
+INFO: 2024-11-10 18:25:24,219: trigger_download() 'Triggering download thread to check if download needed and possible'
+INFO: 2024-11-10 18:25:24,354: process_command() 'Received command: ['-n']'
+INFO: 2024-11-10 18:25:24,357: set_wallpaper() 'Calling set_wallpaper with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/o7tjbz97ryzd1.jpeg'
+INFO: 2024-11-10 18:25:24,357: prepare_thread() 'Prepared buffer contains 28 images'
+INFO: 2024-11-10 18:25:24,357: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/o7tjbz97ryzd1.jpeg, time: 1731259524.3576002'
+INFO: 2024-11-10 18:25:24,359: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:3840, ih:2160, scw:1920, sch:1080, ho:0, vo:0'
+INFO: 2024-11-10 18:25:24,359: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:25' -fill white -annotate 0x0+60+110 '18:25' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10''
+INFO: 2024-11-10 18:25:24,360: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/o7tjbz97ryzd1.jpeg -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:25' -fill white -annotate 0x0+60+110 '18:25' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-6bad82a9c939afe28ff9c901372d91e7.jpg'
+INFO: 2024-11-10 18:25:24,691: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/o7tjbz97ryzd1.jpeg'
+INFO: 2024-11-10 18:25:24,692: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:25:24,956: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/o7tjbz97ryzd1.jpeg'
+INFO: 2024-11-10 18:25:26,358: trigger_download() 'Triggering download thread to check if download needed and possible'
+INFO: 2024-11-10 18:25:51,511: process_command() 'Received command: ['-n']'
+INFO: 2024-11-10 18:25:51,514: set_wallpaper() 'Calling set_wallpaper with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/nzx3460i9nzd1.jpeg'
+INFO: 2024-11-10 18:25:51,514: prepare_thread() 'Prepared buffer contains 27 images'
+INFO: 2024-11-10 18:25:51,514: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/nzx3460i9nzd1.jpeg, time: 1731259551.5144436'
+INFO: 2024-11-10 18:25:51,516: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:3840, ih:2160, scw:1920, sch:1080, ho:0, vo:0'
+INFO: 2024-11-10 18:25:51,516: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:25' -fill white -annotate 0x0+60+110 '18:25' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10''
+INFO: 2024-11-10 18:25:51,516: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/nzx3460i9nzd1.jpeg -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:25' -fill white -annotate 0x0+60+110 '18:25' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-355fd357f956b2b1a14c9649d5b5f3d2.jpg'
+INFO: 2024-11-10 18:25:51,843: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/nzx3460i9nzd1.jpeg'
+INFO: 2024-11-10 18:25:51,844: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:25:52,108: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/nzx3460i9nzd1.jpeg'
+INFO: 2024-11-10 18:25:53,514: trigger_download() 'Triggering download thread to check if download needed and possible'
+INFO: 2024-11-10 18:25:57,578: process_command() 'Received command: ['-n']'
+INFO: 2024-11-10 18:25:57,580: set_wallpaper() 'Calling set_wallpaper with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/zp07oeg5jvzd1.png'
+INFO: 2024-11-10 18:25:57,580: prepare_thread() 'Prepared buffer contains 26 images'
+INFO: 2024-11-10 18:25:57,580: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/zp07oeg5jvzd1.png, time: 1731259557.5808537'
+INFO: 2024-11-10 18:25:57,583: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:3840, ih:2160, scw:1920, sch:1080, ho:0, vo:0'
+INFO: 2024-11-10 18:25:57,583: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:25' -fill white -annotate 0x0+60+110 '18:25' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10''
+INFO: 2024-11-10 18:25:57,583: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/zp07oeg5jvzd1.png -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:25' -fill white -annotate 0x0+60+110 '18:25' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-74bbc158ee6a285ee14bbde59971fa23.jpg'
+INFO: 2024-11-10 18:25:58,131: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/zp07oeg5jvzd1.png'
+INFO: 2024-11-10 18:25:58,132: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:25:58,397: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/zp07oeg5jvzd1.png'
+INFO: 2024-11-10 18:25:59,581: trigger_download() 'Triggering download thread to check if download needed and possible'
+INFO: 2024-11-10 18:26:00,295: clock_thread_method() 'clock_thread updates wallpaper'
+INFO: 2024-11-10 18:26:00,295: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/zp07oeg5jvzd1.png, time: 1731259560.2958775'
+INFO: 2024-11-10 18:26:00,298: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:3840, ih:2160, scw:1920, sch:1080, ho:0, vo:0'
+INFO: 2024-11-10 18:26:00,298: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:26' -fill white -annotate 0x0+60+110 '18:26' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10''
+INFO: 2024-11-10 18:26:00,298: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/zp07oeg5jvzd1.png -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:26' -fill white -annotate 0x0+60+110 '18:26' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-529fb7dac72479fa3e9a07aa1bff34ab.jpg'
+INFO: 2024-11-10 18:26:01,239: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/zp07oeg5jvzd1.png'
+INFO: 2024-11-10 18:26:01,241: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:26:01,557: process_command() 'Received command: ['-n']'
+INFO: 2024-11-10 18:26:01,560: set_wallpaper() 'Calling set_wallpaper with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/130gu8n18vzd1.jpeg'
+INFO: 2024-11-10 18:26:01,560: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/130gu8n18vzd1.jpeg, time: 1731259561.5606825'
+INFO: 2024-11-10 18:26:01,560: prepare_thread() 'Prepared buffer contains 25 images'
+INFO: 2024-11-10 18:26:01,618: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/zp07oeg5jvzd1.png'
+INFO: 2024-11-10 18:26:01,620: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:1920, ih:1080, scw:1920, sch:1080, ho:0, vo:0'
+INFO: 2024-11-10 18:26:01,620: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:26' -fill white -annotate 0x0+60+110 '18:26' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10''
+INFO: 2024-11-10 18:26:01,620: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/130gu8n18vzd1.jpeg -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:26' -fill white -annotate 0x0+60+110 '18:26' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-94c7f3687ea3e5df3f167f51a5157087.jpg'
+INFO: 2024-11-10 18:26:01,780: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/130gu8n18vzd1.jpeg'
+INFO: 2024-11-10 18:26:01,781: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:26:02,098: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/130gu8n18vzd1.jpeg'
+INFO: 2024-11-10 18:26:03,561: trigger_download() 'Triggering download thread to check if download needed and possible'
+INFO: 2024-11-10 18:26:05,213: process_command() 'Received command: ['-n']'
+INFO: 2024-11-10 18:26:05,216: set_wallpaper() 'Calling set_wallpaper with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/c3oasmqpetzd1.png'
+INFO: 2024-11-10 18:26:05,216: prepare_thread() 'Prepared buffer contains 24 images'
+INFO: 2024-11-10 18:26:05,216: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/c3oasmqpetzd1.png, time: 1731259565.216678'
+INFO: 2024-11-10 18:26:05,218: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:2880, ih:1620, scw:1920, sch:1080, ho:0, vo:0'
+INFO: 2024-11-10 18:26:05,218: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:26' -fill white -annotate 0x0+60+110 '18:26' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10''
+INFO: 2024-11-10 18:26:05,218: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/c3oasmqpetzd1.png -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:26' -fill white -annotate 0x0+60+110 '18:26' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-30971fd19acc2f34c66ab73f02563c8a.jpg'
+INFO: 2024-11-10 18:26:05,624: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/c3oasmqpetzd1.png'
+INFO: 2024-11-10 18:26:05,625: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:26:05,889: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/c3oasmqpetzd1.png'
+INFO: 2024-11-10 18:26:07,218: trigger_download() 'Triggering download thread to check if download needed and possible'
+INFO: 2024-11-10 18:26:09,246: process_command() 'Received command: ['-n']'
+INFO: 2024-11-10 18:26:09,248: set_wallpaper() 'Calling set_wallpaper with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/tamarhye810e1.jpeg'
+INFO: 2024-11-10 18:26:09,248: prepare_thread() 'Prepared buffer contains 23 images'
+INFO: 2024-11-10 18:26:09,248: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/tamarhye810e1.jpeg, time: 1731259569.2487187'
+INFO: 2024-11-10 18:26:09,250: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:5120, ih:2880, scw:1920, sch:1080, ho:0, vo:0'
+INFO: 2024-11-10 18:26:09,250: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:26' -fill white -annotate 0x0+60+110 '18:26' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10''
+INFO: 2024-11-10 18:26:09,250: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/tamarhye810e1.jpeg -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:26' -fill white -annotate 0x0+60+110 '18:26' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-580aae599fd6ef49bc58368e840afd53.jpg'
+INFO: 2024-11-10 18:26:09,710: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/tamarhye810e1.jpeg'
+INFO: 2024-11-10 18:26:09,711: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:26:09,979: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/tamarhye810e1.jpeg'
+INFO: 2024-11-10 18:26:11,248: trigger_download() 'Triggering download thread to check if download needed and possible'
+INFO: 2024-11-10 18:26:13,272: process_command() 'Received command: ['-n']'
+INFO: 2024-11-10 18:26:13,274: set_wallpaper() 'Calling set_wallpaper with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/pabd7fizz00e1.jpeg'
+INFO: 2024-11-10 18:26:13,274: prepare_thread() 'Prepared buffer contains 22 images'
+INFO: 2024-11-10 18:26:13,275: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/pabd7fizz00e1.jpeg, time: 1731259573.2751868'
+INFO: 2024-11-10 18:26:13,277: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:1920, ih:1080, scw:1920, sch:1080, ho:0, vo:0'
+INFO: 2024-11-10 18:26:13,277: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:26' -fill white -annotate 0x0+60+110 '18:26' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10''
+INFO: 2024-11-10 18:26:13,277: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/pabd7fizz00e1.jpeg -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:26' -fill white -annotate 0x0+60+110 '18:26' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-9e43538cfd1d86a295d414808f77ef0a.jpg'
+INFO: 2024-11-10 18:26:13,414: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/pabd7fizz00e1.jpeg'
+INFO: 2024-11-10 18:26:13,415: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:26:13,880: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/pabd7fizz00e1.jpeg'
+INFO: 2024-11-10 18:26:15,276: trigger_download() 'Triggering download thread to check if download needed and possible'
+INFO: 2024-11-10 18:26:24,024: process_command() 'Received command: ['-n']'
+INFO: 2024-11-10 18:26:24,026: set_wallpaper() 'Calling set_wallpaper with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/fg3hsxdl1uzd1.png'
+INFO: 2024-11-10 18:26:24,026: prepare_thread() 'Prepared buffer contains 21 images'
+INFO: 2024-11-10 18:26:24,027: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/fg3hsxdl1uzd1.png, time: 1731259584.027121'
+INFO: 2024-11-10 18:26:24,028: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:2560, ih:1440, scw:1920, sch:1080, ho:0, vo:0'
+INFO: 2024-11-10 18:26:24,028: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:26' -fill white -annotate 0x0+60+110 '18:26' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10''
+INFO: 2024-11-10 18:26:24,028: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/fg3hsxdl1uzd1.png -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:26' -fill white -annotate 0x0+60+110 '18:26' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-1d568f82b1d7cc43448d54853acbc242.jpg'
+INFO: 2024-11-10 18:26:24,391: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/fg3hsxdl1uzd1.png'
+INFO: 2024-11-10 18:26:24,392: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:26:24,656: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/fg3hsxdl1uzd1.png'
+INFO: 2024-11-10 18:26:26,027: trigger_download() 'Triggering download thread to check if download needed and possible'
+INFO: 2024-11-10 18:26:26,028: get_throttling() 'Reddit: parsing serverside options'
+INFO: 2024-11-10 18:26:26,028: get_throttling() 'Could not parse Reddit serverside options, using defaults None, None'
+INFO: 2024-11-10 18:26:26,029: get_throttling() 'Reddit: parsing serverside options'
+INFO: 2024-11-10 18:26:26,029: get_throttling() 'Could not parse Reddit serverside options, using defaults None, None'
+INFO: 2024-11-10 18:26:26,029: download_one() 'Reddit: Downloading an image, config: https://www.reddit.com/user/everith/m/wp/'
+INFO: 2024-11-10 18:26:26,030: download_one() 'Reddit: Queue size: 79'
+INFO: 2024-11-10 18:26:26,030: download_one() 'Reddit: Queue populated with 79 URLs'
+INFO: 2024-11-10 18:26:26,030: save_locally() 'Origin URL: https://www.reddit.com/r/wallpaper/comments/1gn8jg4/evening_reflections_by_the_riverside_1920x1080/'
+INFO: 2024-11-10 18:26:26,030: save_locally() 'Image URL: https://i.redd.it/130gu8n18vzd1.jpeg'
+INFO: 2024-11-10 18:26:26,031: save_locally() 'Local path: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/130gu8n18vzd1.jpeg'
+INFO: 2024-11-10 18:26:26,031: save_locally() 'File already exists, skip downloading'
+INFO: 2024-11-10 18:27:00,326: clock_thread_method() 'clock_thread updates wallpaper'
+INFO: 2024-11-10 18:27:00,327: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/fg3hsxdl1uzd1.png, time: 1731259620.3272235'
+INFO: 2024-11-10 18:27:00,330: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:2560, ih:1440, scw:1920, sch:1080, ho:0, vo:0'
+INFO: 2024-11-10 18:27:00,331: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:27' -fill white -annotate 0x0+60+110 '18:27' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10''
+INFO: 2024-11-10 18:27:00,331: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/fg3hsxdl1uzd1.png -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:27' -fill white -annotate 0x0+60+110 '18:27' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-eab003f0f449c2979ef756c1174d6a62.jpg'
+INFO: 2024-11-10 18:27:00,679: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/fg3hsxdl1uzd1.png'
+INFO: 2024-11-10 18:27:00,680: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:27:00,994: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/fg3hsxdl1uzd1.png'
+INFO: 2024-11-10 18:28:00,359: clock_thread_method() 'clock_thread updates wallpaper'
+INFO: 2024-11-10 18:28:00,360: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/fg3hsxdl1uzd1.png, time: 1731259680.3603659'
+INFO: 2024-11-10 18:28:00,363: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:2560, ih:1440, scw:1920, sch:1080, ho:0, vo:0'
+INFO: 2024-11-10 18:28:00,364: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:28' -fill white -annotate 0x0+60+110 '18:28' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10''
+INFO: 2024-11-10 18:28:00,364: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/fg3hsxdl1uzd1.png -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:28' -fill white -annotate 0x0+60+110 '18:28' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-0b484e5a5d9abbbad6d1c9900560a5e4.jpg'
+INFO: 2024-11-10 18:28:00,713: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/fg3hsxdl1uzd1.png'
+INFO: 2024-11-10 18:28:00,715: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:28:00,979: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/fg3hsxdl1uzd1.png'
+INFO: 2024-11-10 18:28:38,509: process_command() 'Received command: ['-n']'
+INFO: 2024-11-10 18:28:38,512: set_wallpaper() 'Calling set_wallpaper with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/wx1gfi90jyzd1.png'
+INFO: 2024-11-10 18:28:38,512: prepare_thread() 'Prepared buffer contains 20 images'
+INFO: 2024-11-10 18:28:38,512: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/wx1gfi90jyzd1.png, time: 1731259718.512714'
+INFO: 2024-11-10 18:28:38,513: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:2560, ih:1440, scw:1920, sch:1080, ho:0, vo:0'
+INFO: 2024-11-10 18:28:38,514: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:28' -fill white -annotate 0x0+60+110 '18:28' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10''
+INFO: 2024-11-10 18:28:38,514: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/wx1gfi90jyzd1.png -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:28' -fill white -annotate 0x0+60+110 '18:28' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-ea0dd96e80d5e7172d0fb03c1236f912.jpg'
+INFO: 2024-11-10 18:28:38,872: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/wx1gfi90jyzd1.png'
+INFO: 2024-11-10 18:28:38,873: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:28:39,187: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/wx1gfi90jyzd1.png'
+INFO: 2024-11-10 18:28:40,503: process_command() 'Received command: ['-n']'
+INFO: 2024-11-10 18:28:40,505: set_wallpaper() 'Calling set_wallpaper with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4i6b4ojiryzd1.jpeg'
+INFO: 2024-11-10 18:28:40,505: prepare_thread() 'Prepared buffer contains 19 images'
+INFO: 2024-11-10 18:28:40,506: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4i6b4ojiryzd1.jpeg, time: 1731259720.50623'
+INFO: 2024-11-10 18:28:40,507: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:3840, ih:2400, scw:1920, sch:1200, ho:0, vo:60'
+INFO: 2024-11-10 18:28:40,507: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+168 '18:28' -fill white -annotate 0x0+60+170 '18:28' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+118 'Sunday, November 10' -fill white -annotate 0x0+60+120 'Sunday, November 10''
+INFO: 2024-11-10 18:28:40,507: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4i6b4ojiryzd1.jpeg -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+168 '18:28' -fill white -annotate 0x0+60+170 '18:28' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+118 'Sunday, November 10' -fill white -annotate 0x0+60+120 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-f28913001e1b1e6d55e7ff616ad239f5.jpg'
+INFO: 2024-11-10 18:28:40,512: trigger_download() 'Triggering download thread to check if download needed and possible'
+INFO: 2024-11-10 18:28:40,513: get_throttling() 'Reddit: parsing serverside options'
+INFO: 2024-11-10 18:28:40,513: get_throttling() 'Could not parse Reddit serverside options, using defaults None, None'
+INFO: 2024-11-10 18:28:40,513: get_throttling() 'Reddit: parsing serverside options'
+INFO: 2024-11-10 18:28:40,513: get_throttling() 'Could not parse Reddit serverside options, using defaults None, None'
+INFO: 2024-11-10 18:28:40,513: download_one() 'Reddit: Downloading an image, config: https://www.reddit.com/user/everith/m/wp/'
+INFO: 2024-11-10 18:28:40,513: download_one() 'Reddit: Queue size: 78'
+INFO: 2024-11-10 18:28:40,513: download_one() 'Reddit: Queue populated with 78 URLs'
+INFO: 2024-11-10 18:28:40,513: save_locally() 'Origin URL: https://www.reddit.com/r/wallpaper/comments/1gn9mfv/concorde_le_merveilleux_by_julien_lepelletier/'
+INFO: 2024-11-10 18:28:40,513: save_locally() 'Image URL: https://i.redd.it/zp07oeg5jvzd1.png'
+INFO: 2024-11-10 18:28:40,513: save_locally() 'Local path: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/zp07oeg5jvzd1.png'
+INFO: 2024-11-10 18:28:40,513: save_locally() 'File already exists, skip downloading'
+INFO: 2024-11-10 18:28:40,843: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4i6b4ojiryzd1.jpeg'
+INFO: 2024-11-10 18:28:40,844: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:28:41,158: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4i6b4ojiryzd1.jpeg'
+INFO: 2024-11-10 18:28:42,508: trigger_download() 'Triggering download thread to check if download needed and possible'
+INFO: 2024-11-10 18:28:45,686: process_command() 'Received command: ['-n']'
+INFO: 2024-11-10 18:28:45,688: set_wallpaper() 'Calling set_wallpaper with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/khfnto3gt20e1.png'
+INFO: 2024-11-10 18:28:45,688: prepare_thread() 'Prepared buffer contains 18 images'
+INFO: 2024-11-10 18:28:45,688: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/khfnto3gt20e1.png, time: 1731259725.6889174'
+INFO: 2024-11-10 18:28:45,689: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:3840, ih:2160, scw:1920, sch:1080, ho:0, vo:0'
+INFO: 2024-11-10 18:28:45,690: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:28' -fill white -annotate 0x0+60+110 '18:28' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10''
+INFO: 2024-11-10 18:28:45,690: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/khfnto3gt20e1.png -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:28' -fill white -annotate 0x0+60+110 '18:28' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-4933dc63a0cabc593b0e7cbf8318d3c3.jpg'
+INFO: 2024-11-10 18:28:46,208: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/khfnto3gt20e1.png'
+INFO: 2024-11-10 18:28:46,210: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:28:46,475: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/khfnto3gt20e1.png'
+INFO: 2024-11-10 18:28:47,689: trigger_download() 'Triggering download thread to check if download needed and possible'
+INFO: 2024-11-10 18:28:55,342: process_command() 'Received command: ['-n']'
+INFO: 2024-11-10 18:28:55,344: set_wallpaper() 'Calling set_wallpaper with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/wqa30so8tpzd1.png'
+INFO: 2024-11-10 18:28:55,344: prepare_thread() 'Prepared buffer contains 17 images'
+INFO: 2024-11-10 18:28:55,345: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/wqa30so8tpzd1.png, time: 1731259735.3453305'
+INFO: 2024-11-10 18:28:55,346: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:1920, ih:1080, scw:1920, sch:1080, ho:0, vo:0'
+INFO: 2024-11-10 18:28:55,346: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:28' -fill white -annotate 0x0+60+110 '18:28' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10''
+INFO: 2024-11-10 18:28:55,346: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/wqa30so8tpzd1.png -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:28' -fill white -annotate 0x0+60+110 '18:28' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-1ef48319bc9f34a0c9624e64b8f0840c.jpg'
+INFO: 2024-11-10 18:28:55,573: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/wqa30so8tpzd1.png'
+INFO: 2024-11-10 18:28:55,574: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:28:55,838: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/wqa30so8tpzd1.png'
+INFO: 2024-11-10 18:28:57,348: trigger_download() 'Triggering download thread to check if download needed and possible'
+INFO: 2024-11-10 18:28:58,285: process_command() 'Received command: ['-n']'
+INFO: 2024-11-10 18:28:58,288: set_wallpaper() 'Calling set_wallpaper with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/omdg5k0c020e1.jpeg'
+INFO: 2024-11-10 18:28:58,289: prepare_thread() 'Prepared buffer contains 16 images'
+INFO: 2024-11-10 18:28:58,292: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/omdg5k0c020e1.jpeg, time: 1731259738.2921817'
+INFO: 2024-11-10 18:28:58,293: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:6000, ih:4000, scw:1920, sch:1280, ho:0, vo:100'
+INFO: 2024-11-10 18:28:58,293: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+208 '18:28' -fill white -annotate 0x0+60+210 '18:28' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+158 'Sunday, November 10' -fill white -annotate 0x0+60+160 'Sunday, November 10''
+INFO: 2024-11-10 18:28:58,293: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/omdg5k0c020e1.jpeg -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+208 '18:28' -fill white -annotate 0x0+60+210 '18:28' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+158 'Sunday, November 10' -fill white -annotate 0x0+60+160 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-e8a05a483f65c83111f6fe94728fe1aa.jpg'
+INFO: 2024-11-10 18:28:59,137: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/omdg5k0c020e1.jpeg'
+INFO: 2024-11-10 18:28:59,137: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:28:59,454: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/omdg5k0c020e1.jpeg'
+INFO: 2024-11-10 18:29:00,293: trigger_download() 'Triggering download thread to check if download needed and possible'
+INFO: 2024-11-10 18:29:00,388: clock_thread_method() 'clock_thread updates wallpaper'
+INFO: 2024-11-10 18:29:00,389: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/omdg5k0c020e1.jpeg, time: 1731259740.3896616'
+INFO: 2024-11-10 18:29:00,396: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:6000, ih:4000, scw:1920, sch:1280, ho:0, vo:100'
+INFO: 2024-11-10 18:29:00,396: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+208 '18:29' -fill white -annotate 0x0+60+210 '18:29' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+158 'Sunday, November 10' -fill white -annotate 0x0+60+160 'Sunday, November 10''
+INFO: 2024-11-10 18:29:00,396: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/omdg5k0c020e1.jpeg -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+208 '18:29' -fill white -annotate 0x0+60+210 '18:29' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+158 'Sunday, November 10' -fill white -annotate 0x0+60+160 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-691b8b1fda190c2593b890b511d89d52.jpg'
+INFO: 2024-11-10 18:29:01,288: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/omdg5k0c020e1.jpeg'
+INFO: 2024-11-10 18:29:01,289: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:29:01,659: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/omdg5k0c020e1.jpeg'
+INFO: 2024-11-10 18:29:02,636: process_command() 'Received command: ['-n']'
+INFO: 2024-11-10 18:29:02,639: set_wallpaper() 'Calling set_wallpaper with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/udd1g719tpzd1.png'
+INFO: 2024-11-10 18:29:02,639: prepare_thread() 'Prepared buffer contains 15 images'
+INFO: 2024-11-10 18:29:02,640: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/udd1g719tpzd1.png, time: 1731259742.6403172'
+INFO: 2024-11-10 18:29:02,641: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:1920, ih:1080, scw:1920, sch:1080, ho:0, vo:0'
+INFO: 2024-11-10 18:29:02,641: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:29' -fill white -annotate 0x0+60+110 '18:29' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10''
+INFO: 2024-11-10 18:29:02,641: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/udd1g719tpzd1.png -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:29' -fill white -annotate 0x0+60+110 '18:29' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-00f3f4a768b9415f8997754f94ebf05f.jpg'
+INFO: 2024-11-10 18:29:03,003: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/udd1g719tpzd1.png'
+INFO: 2024-11-10 18:29:03,006: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:29:03,429: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/udd1g719tpzd1.png'
+INFO: 2024-11-10 18:29:04,640: trigger_download() 'Triggering download thread to check if download needed and possible'
+INFO: 2024-11-10 18:29:06,250: process_command() 'Received command: ['-n']'
+INFO: 2024-11-10 18:29:06,253: set_wallpaper() 'Calling set_wallpaper with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/em2yphe04szd1.png'
+INFO: 2024-11-10 18:29:06,253: prepare_thread() 'Prepared buffer contains 14 images'
+INFO: 2024-11-10 18:29:06,255: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/em2yphe04szd1.png, time: 1731259746.2555091'
+INFO: 2024-11-10 18:29:06,257: apply_display_mode() 'ImageMagick display mode cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/em2yphe04szd1.png -resize 1920x1080^ -gravity center -extent 1920x1080 -scale 10% -blur 0x3 -resize 1000% -clone 0 -resize 1920x1080 -size 1920x1080 -gravity center -composite /home/erik/.config/variety/wallpaper/wallpaper-zoomed-bf3731c6dedafa46ff982949fd7ba012.jpg'
+INFO: 2024-11-10 18:29:07,323: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:1920, ih:1080, scw:1920, sch:1080, ho:0, vo:0'
+INFO: 2024-11-10 18:29:07,323: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:29' -fill white -annotate 0x0+60+110 '18:29' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10''
+INFO: 2024-11-10 18:29:07,323: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/wallpaper/wallpaper-zoomed-bf3731c6dedafa46ff982949fd7ba012.jpg -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:29' -fill white -annotate 0x0+60+110 '18:29' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-c8490de37ac9a0a405ffb2d5bb77c8cf.jpg'
+INFO: 2024-11-10 18:29:07,492: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/em2yphe04szd1.png'
+INFO: 2024-11-10 18:29:07,494: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:29:07,757: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/em2yphe04szd1.png'
+INFO: 2024-11-10 18:29:08,258: trigger_download() 'Triggering download thread to check if download needed and possible'
+INFO: 2024-11-10 18:29:09,141: process_command() 'Received command: ['-n']'
+INFO: 2024-11-10 18:29:09,143: set_wallpaper() 'Calling set_wallpaper with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/7rmg6qgqcszd1.png'
+INFO: 2024-11-10 18:29:09,143: prepare_thread() 'Prepared buffer contains 13 images'
+INFO: 2024-11-10 18:29:09,144: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/7rmg6qgqcszd1.png, time: 1731259749.1442807'
+INFO: 2024-11-10 18:29:09,145: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:3840, ih:2160, scw:1920, sch:1080, ho:0, vo:0'
+INFO: 2024-11-10 18:29:09,145: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:29' -fill white -annotate 0x0+60+110 '18:29' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10''
+INFO: 2024-11-10 18:29:09,145: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/7rmg6qgqcszd1.png -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+108 '18:29' -fill white -annotate 0x0+60+110 '18:29' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+58 'Sunday, November 10' -fill white -annotate 0x0+60+60 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-a1623ca69b4e797424171a74d46c8150.jpg'
+INFO: 2024-11-10 18:29:09,691: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/7rmg6qgqcszd1.png'
+INFO: 2024-11-10 18:29:09,692: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:29:09,955: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/7rmg6qgqcszd1.png'
+INFO: 2024-11-10 18:29:11,145: trigger_download() 'Triggering download thread to check if download needed and possible'
+INFO: 2024-11-10 18:29:12,238: process_command() 'Received command: ['-n']'
+INFO: 2024-11-10 18:29:12,242: set_wallpaper() 'Calling set_wallpaper with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4qj4856dkszd1.jpeg'
+INFO: 2024-11-10 18:29:12,245: prepare_thread() 'Prepared buffer contains 12 images'
+INFO: 2024-11-10 18:29:12,245: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4qj4856dkszd1.jpeg, time: 1731259752.2459052'
+INFO: 2024-11-10 18:29:12,247: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:3840, ih:2400, scw:1920, sch:1200, ho:0, vo:60'
+INFO: 2024-11-10 18:29:12,248: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+168 '18:29' -fill white -annotate 0x0+60+170 '18:29' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+118 'Sunday, November 10' -fill white -annotate 0x0+60+120 'Sunday, November 10''
+INFO: 2024-11-10 18:29:12,248: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4qj4856dkszd1.jpeg -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+168 '18:29' -fill white -annotate 0x0+60+170 '18:29' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+118 'Sunday, November 10' -fill white -annotate 0x0+60+120 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-4633404e1f7ad309d393fc3d46d1f492.jpg'
+INFO: 2024-11-10 18:29:12,790: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4qj4856dkszd1.jpeg'
+INFO: 2024-11-10 18:29:12,791: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:29:13,062: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4qj4856dkszd1.jpeg'
+INFO: 2024-11-10 18:29:14,248: trigger_download() 'Triggering download thread to check if download needed and possible'
+INFO: 2024-11-10 18:30:00,420: clock_thread_method() 'clock_thread updates wallpaper'
+INFO: 2024-11-10 18:30:00,421: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4qj4856dkszd1.jpeg, time: 1731259800.4210865'
+INFO: 2024-11-10 18:30:00,424: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:3840, ih:2400, scw:1920, sch:1200, ho:0, vo:60'
+INFO: 2024-11-10 18:30:00,424: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+168 '18:30' -fill white -annotate 0x0+60+170 '18:30' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+118 'Sunday, November 10' -fill white -annotate 0x0+60+120 'Sunday, November 10''
+INFO: 2024-11-10 18:30:00,424: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4qj4856dkszd1.jpeg -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+168 '18:30' -fill white -annotate 0x0+60+170 '18:30' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+118 'Sunday, November 10' -fill white -annotate 0x0+60+120 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-9d89f06892c27191ec0a0e8840443ad5.jpg'
+INFO: 2024-11-10 18:30:00,765: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4qj4856dkszd1.jpeg'
+INFO: 2024-11-10 18:30:00,766: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:30:01,131: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4qj4856dkszd1.jpeg'
+INFO: 2024-11-10 18:31:00,449: clock_thread_method() 'clock_thread updates wallpaper'
+INFO: 2024-11-10 18:31:00,450: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4qj4856dkszd1.jpeg, time: 1731259860.450443'
+INFO: 2024-11-10 18:31:00,455: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:3840, ih:2400, scw:1920, sch:1200, ho:0, vo:60'
+INFO: 2024-11-10 18:31:00,455: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+168 '18:31' -fill white -annotate 0x0+60+170 '18:31' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+118 'Sunday, November 10' -fill white -annotate 0x0+60+120 'Sunday, November 10''
+INFO: 2024-11-10 18:31:00,455: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4qj4856dkszd1.jpeg -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+168 '18:31' -fill white -annotate 0x0+60+170 '18:31' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+118 'Sunday, November 10' -fill white -annotate 0x0+60+120 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-8fed05b2ed47516ab9854e404a02add7.jpg'
+INFO: 2024-11-10 18:31:00,805: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4qj4856dkszd1.jpeg'
+INFO: 2024-11-10 18:31:00,806: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:31:01,072: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4qj4856dkszd1.jpeg'
+INFO: 2024-11-10 18:32:00,479: clock_thread_method() 'clock_thread updates wallpaper'
+INFO: 2024-11-10 18:32:00,480: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4qj4856dkszd1.jpeg, time: 1731259920.480649'
+INFO: 2024-11-10 18:32:00,483: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:3840, ih:2400, scw:1920, sch:1200, ho:0, vo:60'
+INFO: 2024-11-10 18:32:00,484: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+168 '18:32' -fill white -annotate 0x0+60+170 '18:32' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+118 'Sunday, November 10' -fill white -annotate 0x0+60+120 'Sunday, November 10''
+INFO: 2024-11-10 18:32:00,484: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4qj4856dkszd1.jpeg -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+168 '18:32' -fill white -annotate 0x0+60+170 '18:32' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+118 'Sunday, November 10' -fill white -annotate 0x0+60+120 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-46ed2d9cda73b7ec7ae3e11c471ba457.jpg'
+INFO: 2024-11-10 18:32:00,827: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4qj4856dkszd1.jpeg'
+INFO: 2024-11-10 18:32:00,828: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:32:01,092: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4qj4856dkszd1.jpeg'
+INFO: 2024-11-10 18:32:14,249: get_throttling() 'Reddit: parsing serverside options'
+INFO: 2024-11-10 18:32:14,250: get_throttling() 'Could not parse Reddit serverside options, using defaults None, None'
+INFO: 2024-11-10 18:32:14,250: get_throttling() 'Reddit: parsing serverside options'
+INFO: 2024-11-10 18:32:14,250: get_throttling() 'Could not parse Reddit serverside options, using defaults None, None'
+INFO: 2024-11-10 18:32:14,250: download_one() 'Reddit: Downloading an image, config: https://www.reddit.com/user/everith/m/wp/'
+INFO: 2024-11-10 18:32:14,251: download_one() 'Reddit: Queue size: 77'
+INFO: 2024-11-10 18:32:14,251: download_one() 'Reddit: Queue populated with 77 URLs'
+INFO: 2024-11-10 18:32:14,252: save_locally() 'Origin URL: https://www.reddit.com/r/wallpaper/comments/1go0dtz/morning_bliss_3840x2160/'
+INFO: 2024-11-10 18:32:14,252: save_locally() 'Image URL: https://i.redd.it/nhhumnx4q20e1.png'
+INFO: 2024-11-10 18:32:14,252: save_locally() 'Local path: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/nhhumnx4q20e1.png'
+INFO: 2024-11-10 18:32:14,252: save_locally() 'File already exists, skip downloading'
+INFO: 2024-11-10 18:33:00,508: clock_thread_method() 'clock_thread updates wallpaper'
+INFO: 2024-11-10 18:33:00,509: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4qj4856dkszd1.jpeg, time: 1731259980.5094697'
+INFO: 2024-11-10 18:33:00,511: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:3840, ih:2400, scw:1920, sch:1200, ho:0, vo:60'
+INFO: 2024-11-10 18:33:00,512: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+168 '18:33' -fill white -annotate 0x0+60+170 '18:33' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+118 'Sunday, November 10' -fill white -annotate 0x0+60+120 'Sunday, November 10''
+INFO: 2024-11-10 18:33:00,512: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4qj4856dkszd1.jpeg -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+168 '18:33' -fill white -annotate 0x0+60+170 '18:33' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+118 'Sunday, November 10' -fill white -annotate 0x0+60+120 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-be457c6b965b568d27046fcca88d751f.jpg'
+INFO: 2024-11-10 18:33:00,859: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4qj4856dkszd1.jpeg'
+INFO: 2024-11-10 18:33:00,860: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:33:01,175: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4qj4856dkszd1.jpeg'
+INFO: 2024-11-10 18:34:00,538: clock_thread_method() 'clock_thread updates wallpaper'
+INFO: 2024-11-10 18:34:00,540: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4qj4856dkszd1.jpeg, time: 1731260040.539985'
+INFO: 2024-11-10 18:34:00,543: compute_trimmed_offsets() 'Trimmed offsets debug info: w:1920, h:1080, ratio:1.777778, iw:3840, ih:2400, scw:1920, sch:1200, ho:0, vo:60'
+INFO: 2024-11-10 18:34:00,543: build_imagemagick_clock_cmd() 'Applying clock filter: -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+168 '18:34' -fill white -annotate 0x0+60+170 '18:34' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+118 'Sunday, November 10' -fill white -annotate 0x0+60+120 'Sunday, November 10''
+INFO: 2024-11-10 18:34:00,543: build_imagemagick_clock_cmd() 'ImageMagick clock cmd: convert /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4qj4856dkszd1.jpeg -scale 1920x1080^ -density 100 -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:70'` -pointsize 70 -gravity SouthEast -fill '#00000044' -annotate 0x0+58+168 '18:34' -fill white -annotate 0x0+60+170 '18:34' -font `fc-match -f '%{file[0]}' 'Ubuntu Condensed:,:30'` -pointsize 30 -fill '#00000044' -annotate 0x0+58+118 'Sunday, November 10' -fill white -annotate 0x0+60+120 'Sunday, November 10' /home/erik/.config/variety/wallpaper/wallpaper-clock-93b94a481607913d6a9711671263a465.jpg'
+INFO: 2024-11-10 18:34:00,889: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4qj4856dkszd1.jpeg'
+INFO: 2024-11-10 18:34:00,890: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:34:01,155: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4qj4856dkszd1.jpeg'
+INFO: 2024-11-10 18:34:07,248: on_quit() 'Quitting'
+INFO: 2024-11-10 18:34:07,266: do_set_wp() 'Calling do_set_wp with /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4qj4856dkszd1.jpeg, time: 1731260047.2668836'
+INFO: 2024-11-10 18:34:07,645: update_indicator() 'Setting file info to: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4qj4856dkszd1.jpeg'
+INFO: 2024-11-10 18:34:07,646: list_files() 'More than 1 files in the folders, stop listing'
+INFO: 2024-11-10 18:34:07,646: set_icon() 'Showing indicator icon image: /home/erik/.config/variety/Downloaded/reddit_www_reddit_com_user_everith_m_wp_/4qj4856dkszd1.jpeg'
