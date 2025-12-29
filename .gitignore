@@ -1,3 +1,11 @@
 zsh/.config/zsh/.zcompdump
 zsh/.config/zsh/history
 zsh/.config/zsh/plugins/
+
+variety/.config/variety/wallpaper/
+variety/.config/variety/history.txt
+variety/.config/variety/variety.log
+variety/.config/variety/Fetched/
+variety/.config/variety/Favorites/
+variety/.config/variety/Downloaded/
+variety/.config/variety/.last_change_time
