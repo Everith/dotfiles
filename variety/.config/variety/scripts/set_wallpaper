@@ -64,6 +64,26 @@ detect_desktop() {
 
 DE=$(detect_desktop)
 
+DESKTOP_SESSION="hyprland"
+if [ "$DESKTOP_SESSION" == "hyprland" ]; then
+    # Is the awww-daemon running?
+    #aWWW=$(pidof awww-daemon)
+    if [ -n "$(pidof awww-daemon)" ]; then
+        # awww img --transition-type=random "$WP"
+        # awww may spike a cpu core when using fancy transition effects on some systems. Therefore we can check the cpu usage and choose to not change
+        # wallpapers or use a less intensive transisiton type when doing so. This can be useful when the CPU is already under heavy load.
+        cpuUsage=$(ps -A -o %cpu | awk '{s+=$1} END {print s}')
+        cpuLimit=15.0
+        if (( $(echo "$cpuUsage > $cpuLimit" | bc -l) )); then
+            # option1 - High CPU usage.
+            awww img --resize fit --transition-type=none "$WP"
+        else
+            #option2 - Low CPU usage.
+            awww img --resize fit --transition-type=random "$WP"
+        fi
+    fi
+fi
+
 if [ "$DE" == "enlightenment" ]; then
     # Enlightenment
     # Needs Modules/System/DBus Extension loaded to work
