@@ -5,8 +5,8 @@
 date=$(date '+%Y-%m-%d')
 
 docker_home="srv/docker"
-backup_temp="/srv/backup/temp"
-backup="/srv/backup"
+backup_temp="/home/erik/backup/temp"
+backup="/home/erik/backup"
 #
 # mkdir ~/.backup/$date
 # mkdir /srv/backup/$date
@@ -62,6 +62,10 @@ cp /etc/motd $backup_temp/etc
 mkdir -p $backup_temp/var/spool/cron/crontabs/
 cp -r /var/spool/cron/crontabs/* $backup_temp/var/spool/cron/crontabs
 
+#Minecraft
+cp -r /srv/minecraft $backup_temp/srv/
+#Website
+cp -r /srv/www $backup_temp/srv/
 
 #DUCKDNS
 mkdir -p $backup_temp/home/erik/duckdns
@@ -72,7 +76,7 @@ cp -r /etc/fstab $backup_temp/
 apt list | awk -F'/' '{ printf "%-30s %s\n", $1, $2 }' > $backup_temp/installed_application.txt
 
 
-mv $backup/latest.tar.gz $backup/$date.tar
-tar zcf $backup/latest.tar.gz $backup_temp/*
+mv $backup/latest-behemoth.tar.gz $backup/behemoth-$date.tar
+tar zcf $backup/latest-behemoth.tar.gz $backup_temp/*
 
 rm -r $backup_temp

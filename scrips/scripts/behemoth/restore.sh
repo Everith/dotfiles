@@ -1,9 +1,9 @@
 #!/bin/bash
 
-restore_root="/srv/backup/temp/srv/backup/temp"
+restore_root="/home/erik/backup/temp/home/erik/backup/temp"
 
-mkdir -p /srv/backup/temp
-tar zxf /srv/backup/latest.tar.gz -C /srv/backup/temp
+mkdir -p /home/erik/backup/temp
+tar zxf /home/erik/backup/latest.tar.gz -C /srv/backup/temp
 
 # Install applications: 
 sudo apt update && apt upgrade -y
