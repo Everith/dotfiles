@@ -1,19 +1,18 @@
 * {
-    all: unset;
-    font-family: JetBrainsMono;
-    font-weight: bold;
+  all: unset;
+  font-family: Hack NF;
+  font-weight: bold;
 }
+
 @import "scripts/colors/colors.scss";
 @import "scss/lib.scss";
 
-@import "scss/bar.scss";
+@import "scss/system.scss";
 @import "scss/powermenu.scss";
 @import "scss/launcher.scss";
 
 @import "scss/control_center.scss";
 @import "scss/notifications_popup.scss";
-
-
 
 @import "scss/language.scss";
 @import "scss/taskbar.scss";

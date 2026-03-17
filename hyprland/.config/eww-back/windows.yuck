@@ -1,0 +1,13 @@
+(defwindow powermenu
+  :monitor 0 ;; Optional for X11
+  :stacking "fg"
+  :windowtype "normal"
+  :wm-ignore true
+  :geometry (geometry
+              :width "10%"
+              :height "10%")
+  (box :orientation "vertical" :class "bx"
+    (button :onclick "notify-send Hello")
+    (label :text "Hello, World!")
+  )
+)

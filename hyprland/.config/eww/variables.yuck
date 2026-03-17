@@ -1,5 +1,6 @@
-; VARS
-
+;;#######################################
+;;############### Variables #############
+;;#######################################
 (defvar open_control_center false)
 (defvar open_osd false)
 (defvar open_launcher false)
@@ -10,12 +11,17 @@
 (defvar recorder_audio false)
 (defvar recorder_region false)
 
-; POLLS
+
+;;#######################################
+;;############### poll ##################
+;;#######################################
 
 (defpoll recording :interval "1s"
 "pgrep 'wf-recorder' || echo false")
 
-; LISTENS
+;;#######################################
+;;############### Listen ################
+;;#######################################
 
 (deflisten network :initial '{"essid": "lo", "signal": ""}'
 "scripts/network.sh")
